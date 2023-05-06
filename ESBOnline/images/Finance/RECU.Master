@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RECU.master.cs" Inherits="ESPOnline.Finance.RECU" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head id="Head1" runat="server">
+    
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+      
+        
+        <script type="text/javascript" src="../Contents/Scripts/JScript1.js"></script>
+              
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+     
+    <div class="container-fluid">  
+    <div id="wrap">
+
+    
+       <div class="row" > 
+      <div class="navbar  navbar-fixed-top" >
+      <div class=" navbar-header ">
+      <div class="container">
+      
+          <div class="img-responsive">
+          <img class="img-responsive" alt="" src="../Contents/Img/logo.png" />
+          </div>
+
+          
+         </div>     
+      </div>
+          <div class="navbar-inner">
+          <div class="container">
+          
+              <div class="text-right ">
+              <div class="form-group">
+              <asp:Label CssClass="h4 text-info" ID="Label2" runat="server"></asp:Label>
+              </div>
+              <div class="form-group">
+                  <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" 
+                      onclick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+                      </div>
+              </div>
+
+            </div>
+          </div> 
+          
+         
+          <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav navbar-nav pull-left">
+            
+              
+              <%--<li><a href="Absence.aspx">Absence</a></li>--%>
+               
+            </ul>
+            
+            </div>
+          </div> 
+          
+
+      </div>
+      </div>
+
+
+ <%--     </div>--%>
+
+ <script type="text/javascript">
+     $(document).ready(function () {
+         var url = window.location.pathname;
+         var substr = url.split('/');
+         var urlaspx = substr[substr.length - 1];
+         $('.nav navbar-nav pull-left').find('.h4').removeClass('h4');
+         $('.nav li a').each(function () {
+             if (this.href.indexOf(urlaspx) >= 0) {
+                 $(this).parent().addClass('h4');
+             }
+         });
+     });
+             </script>  
+                  
+            <div class="row">
+            
+                <div class="span3" style="margin-top:8%; ">
+
+       
+        </div>
+
+     
+
+      
+      <div class="span12" style="margin-top:10%; " >
+  <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        
+        
+        </asp:ContentPlaceHolder>
+  </div>
+        </div>
+
+        
+        </div>
+
+      </div><!-- End Wrap -->
+      
+      <div class="container">
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      </div>
+      <hr />
+    <div id="footer">
+      <div class="container-fluid">
+      
+        <p class="text-center">© 2014-2015 Esprit, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        
+      </div>
+    </div>
+    </div>
+
+
+    </form>
+</body>
+</html>

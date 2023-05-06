@@ -1,0 +1,14 @@
+﻿body 
+{
+    .RadWindow div.rwDialogPopup  a.rwPopupButton,
+.RadWindow div.rwDialogPopup  a.rwPopupButton span {
+    float: none;
+    text-align: center;
+}
+ 
+.RadWindow div.rwDialogPopup  a.rwPopupButton {
+    float: left;
+    margin: 24px 10px 24px 20px !important;
+    width: 70px;
+}
+

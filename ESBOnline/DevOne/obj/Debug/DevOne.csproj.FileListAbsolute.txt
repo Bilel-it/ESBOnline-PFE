@@ -1,0 +1,5 @@
+C:\Users\zhunter\Documents\Visual Studio 2010\Projects\DevOne\DevOne\bin\DevOne.dll
+C:\Users\zhunter\Documents\Visual Studio 2010\Projects\DevOne\DevOne\bin\DevOne.pdb
+C:\Users\zhunter\Documents\Visual Studio 2010\Projects\DevOne\DevOne\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\zhunter\Documents\Visual Studio 2010\Projects\DevOne\DevOne\obj\Debug\DevOne.dll
+C:\Users\zhunter\Documents\Visual Studio 2010\Projects\DevOne\DevOne\obj\Debug\DevOne.pdb

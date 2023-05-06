@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ens.master.cs" Inherits="ESPOnline.Enseignants.Ens" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<link  rel="SHORTCUT ICON"
+       href="../images/espr.ico"/>
+    
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       <%-- <link href="../Contents/Css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+        <link href="../Contents/Css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+       
+        <link href="../Contents/Css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <link href="../Contents/Css/bootstrap.css" rel="stylesheet" type="text/css" />--%>
+      <%--  <script type="text/javascript" src="../Contents/Scripts/JScript1.js"></script>--%>
+           
+
+
+
+
+
+        
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .img-responsive {
+            height: 54px;
+            width: 94px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+          
+      <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container-fluid">
+        <div id="wrap">
+        <br /><br />
+      
+            <div class="row">
+                <div class="navbar  navbar-fixed-top">
+                    <div class=" navbar-header ">
+                        <div class="container">
+                            <div class="img-responsive">
+                                 <img class="img-responsive" alt="" src="../Contents/Img/logo-esb.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <div class="text-right ">
+                                <div class="form-group">
+                                    <asp:Label CssClass="h4 text-info" ID="Label2" runat="server"></asp:Label>
+                                    <asp:Label CssClass="h4 text-info" ID="Label1" runat="server" 
+                                        ForeColor="#990000"></asp:Label>
+                                </div>
+                                <div class="form-group">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" OnClick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      &nbsp;</div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          &nbsp;</li>
+				<li class="dropdown" Visible="false">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" > </b></a>
+             
+            <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <%-- <a href="./" class="navbar-brand">ghdg</a>--%>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="Accueil.aspx">Accueil</a></li>
+          <li >
+          <a href="Changepass.aspx">Changer mot de passe</a>
+        </li>
+				<li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Absence <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	            
+	          <li><a href="Absenceense.aspx">Saisie Absence</a></li>
+	          <li><a href="absaffich2022.aspx">Suivi Absence</a></li>
+	          
+	        </ul>
+	      </li>
+        <li>
+          <a href="ChargeENS.aspx">Plan d'études</a>
+        </li>
+            <li>
+          <a href="Entretiensession2022.aspx">Admission</a>
+        </li>
+       
+   
+       <%-- <li>
+          <a href="AffichageNote.aspx">Affichage des notes</a>
+        </li>--%>
+      <%--  <li >
+          <a href="A1.aspx">Encadrement</a>
+        </li>--%>
+      
+        <%-- <li >
+          <a href="Statistiques.aspx">Évaluation des enseignements</a>
+        </li>--%>
+        <%-- <li >
+          <a href="Suivi_devaluation.aspx">Suivi Évaluation </a>
+        </li>--%>
+         <%--<li ><a id="A1" href="Entretiensession2.aspx"  runat="server"> Concours d'admission</a></li>--%>
+        <%-- <li >
+          <a href="NOTE1415.aspx">Notes</a>
+        </li>--%>
+          <%--<li >
+          <a id="test" runat="server" href="HL.aspx" ></a>
+        </li>--%>
+         <%--<li class="dropdown">
+	        <a href="#" class="navbar-brand" data-toggle="dropdown" id="A3" runat="server">Niveau langue <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	          <li><a href="Modif_niv_lgrfr_ang_2015.aspx" id="idup" runat="server">saisie Niv langue</a></li>
+	          <li><a href="Fiche_niv_lge_2015.aspx" id="idup2" runat="server">Suivi niveau/classe</a></li>
+               <li><a href="Fiche_niv_moins_b2_2015.aspx" id="A4" runat="server">Suivi niveau inferieure à B2</a></li>
+                <li><a href="Etat_langue_2015.aspx" id="A1" runat="server">Statistiques</a></li>
+                 
+                 <li >
+          <a  runat="server" id="L1" href="Consulter_TEST_FR.aspx" visible="false">liste français</a>
+           
+           
+           <li><a href="Consulter_TEST_ANG.aspx" id="POP2" runat="server" visible="false">liste Anglais</a></li>
+              
+<li><a href="Formation29_02_16_list.aspx" id="POP3" runat="server" visible="false">liste Formation</a></li>
+ 
+           <li >     
+	          
+	        </ul>
+	      </li>--%>
+      
+ 
+
+      </ul>
+    </nav>
+  </div>
+
+	         
+</header>
+
+
+ <%--     </div>--%>
+
+
+                  
+            <div class="row">
+            <%--
+                <div class="span3" style="margin-top:8%; ">
+
+       
+        </div>
+--%>
+      
+
+      
+      <div class="span12" style="margin-top:10%; " >
+  <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        
+        
+        </asp:ContentPlaceHolder>
+  </div>
+        </div>
+
+        
+        </div>
+
+      </div><!-- End Wrap -->
+      <!-- Begin page footer -->
+     <%-- <div class="container">
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      </div>--%>
+      <hr />
+    <div id="footer">
+      <div class="container-fluid">
+      
+        <p class="text-center">  © 2021 Shool of Business, Inc. ·<a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        
+      </div>
+    </div>
+    </div>
+
+    </form>
+       <%--<script src="../Contents/jquery.js" type="text/javascript"></script>
+               <script src="../Contents/CSS3/js/bootstrap.min.js" type="text/javascript"></script>--%>
+</body>
+</html>

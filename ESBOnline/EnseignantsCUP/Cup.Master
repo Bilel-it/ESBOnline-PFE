@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cup.master.cs" Inherits="ESPOnline.EnseignantsCUP.Cup" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+<link  rel="SHORTCUT ICON"
+       href="../images/espr.ico"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+              
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .img-responsive {
+            height: 42px;
+            width: 97px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+            
+     <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container-fluid">
+        <div id="wrap">
+        <br /><br />
+      
+            <div class="row">
+                <div class="navbar  navbar-fixed-top">
+                    <div class=" navbar-header ">
+                        <div class="container">
+                            <div class="img-responsive">
+                             <img class="img-responsive" alt="" src="../Contents/Img/logoESB_Blanc.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <div class="text-right ">
+                                <div class="form-group">
+                                    <asp:Label CssClass="h4 text-info" ID="Label2" runat="server"></asp:Label>
+                                </div>
+                                <div class="form-group">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" OnClick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigationavigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      &nbsp;</div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          &nbsp;</li>
+				<li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" visible="false"> </b></a>
+             
+            <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <%-- <a href="./" class="navbar-brand">ghdg</a>--%>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+    <%--    <li><a class="navbar-brand" href="Accueil.aspx">Accueil</a></li>--%>
+				<li class="dropdown">
+	        <a href="#" class="navbar-brand" data-toggle="dropdown">Absence <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	          <li><a href="Absence.aspx">Saisie Absence</a></li>
+	          <li><a href="AffichageAbsence.aspx">Suivi Absence</a></li>
+	          
+	        </ul>
+	      </li>
+             <li class="dropdown">
+	        <a href="A1.aspx" class="navbar-brand" data-toggle="dropdown">Affectation <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	        <%--  <li><a href="TestAffectation.aspx">Saisie Affectation</a></li>--%>
+              <li><a href="Affectation21.aspx">Saisie Affectation</a></li>
+               <li><a href="Chargeparenseignant.aspx" >Charge par Enseignant</a></li>
+	          <li><a href="ExportTOExcel.aspx">ExportToExcelsem1</a></li>
+	            <li><a href="ExportTOExcel2.aspx">ExportToExcelSem2</a></li>
+	        </ul>
+	      </li>
+        <li>
+          <a class="navbar-brand" href="Charg.aspx">Plan d'études</a>
+        </li>
+          
+        <%--<li class="dropdown">
+	        <a href="#" class="navbar-brand" data-toggle="dropdown">Encadrement<b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	          <li><a href="#" target="_blank">Saisie Encadrement</a></li>
+	          <li><a href="#">Suivi Encadrement</a></li>
+	          
+	        </ul>
+	      </li>--%>
+       <%-- <li>
+          <a href="AffichageNote.aspx">Affichage des notes</a>
+        </li>--%>
+         <li >
+          <a  href="Changepass.aspx">Changer mot de passe</a>
+        </li>
+       <%-- <li >
+          <a href="Statistiques.aspx">Évaluation</a>
+        </li>--%>
+          <li class="dropdown">
+        <a href="#" class="navbar-brand" data-toggle="dropdown">Évaluation <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          
+	        <%--  <li><a href="TestAffectation.aspx">Saisie Affectation</a></li>--%>
+              <li><a href="Statistiques.aspx">Évaluation Individuelle</a></li>
+               <li><a href="Statistiqueparens.aspx" id="test2" runat="server" >Évaluation par CUPs </a></li>
+                <li><a href="Evaluationpardept.aspx" id="test3" runat="server" >Évaluation par département </a></li>
+	          
+	          <%-- <li><a href="Suivi_devaluation.aspx" id="A1" runat="server" > Suivi Évaluation </a></li>--%>
+	        </ul>
+	      </li>
+        <li>
+     
+          <li ><a id="A2" href="Entretiensession2.aspx"  runat="server"> Concours d'admission</a></li>
+          <%-- <li >
+          <a  href="NOTE1415.aspx">Notes</a>
+        </li>--%>
+         <%--<li >
+          <a  href="Consultation_orientation.aspx">Orientation</a>
+        </li>--%>
+  <%--     <li class="dropdown">
+        <a href="#" class="navbar-brand" data-toggle="dropdown" id ="test" runat="server">TOEIC <b class="caret"></b></a>--%>
+	       <%-- <ul class="dropdown-menu">
+	          
+	      
+	           <li >  <asp:LinkButton runat="server" NavigateUrl="Toeic_ens_cup.aspx" ID="LinkButtonID" OnClick=" clickbtn_Click"> Toeic</asp:LinkButton></li>
+	        </ul>
+	      </li--%>
+         <%--<li >
+          <a  href="SuiviEvaluation.aspx">Suivi Evaluation</a></li>--%>
+           <li >
+      
+             
+        <%--</li>
+          <li >
+          <a href="Entretiensession2.aspx">Concours addmission2014/2015</a>
+        </li>--%>
+      </ul>
+             
+      </ul>
+    </nav>
+  </div>
+
+	         
+</header>
+
+      <!-- Begin page content -->
+
+      
+      <div class="span12" style="margin-top:10%; " >
+  <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        
+        
+        </asp:ContentPlaceHolder>
+  </div>
+        </div>
+
+        
+        </div>
+
+      </div><!-- End Wrap -->
+      <!-- Begin page footer -->
+      <div class="container">
+      <p class="pull-right"><a href="#"></a></p>
+      </div>
+      <hr />
+    <div id="footer">
+      <div class="container-fluid">
+      
+        <p class="text-center">© 2021 School of Business, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        
+      </div>
+    </div>
+    </div>
+
+    </form>
+  <%--  <script src="../Contents/jquery.js" type="text/javascript"></script>
+               <script src="../Contents/CSS3/js/bootstrap.min.js" type="text/javascript"></script>--%>
+</body>
+</html>

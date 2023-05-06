@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="ESP_ETUDIANT">
+    <Key>
+      <PropertyRef Name="ID_ET" />
+    </Key>
+    <Property Name="ID_ET" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="NOM_ET" Type="varchar2" MaxLength="65" />
+    <Property Name="PNOM_ET" Type="varchar2" MaxLength="65" />
+    <Property Name="DATE_NAIS_ET" Type="date" />
+    <Property Name="LIEU_NAIS_ET" Type="varchar2" MaxLength="35" />
+    <Property Name="NATURE_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="FONCTION_ET" Type="varchar2" MaxLength="30" />
+    <Property Name="ADRESSE_ET" Type="varchar2" MaxLength="100" />
+    <Property Name="TEL_ET" Type="varchar2" MaxLength="120" />
+    <Property Name="TEL_PARENT_ET" Type="varchar2" MaxLength="30" />
+    <Property Name="E_MAIL_ET" Type="varchar2" MaxLength="400" />
+    <Property Name="CYCLE_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="NATURE_BAC" Type="varchar2" MaxLength="2" />
+    <Property Name="DATE_BAC" Type="date" />
+    <Property Name="NUM_BAC_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="ETAB_BAC" Type="varchar2" MaxLength="100" />
+    <Property Name="DIPLOME_SUP_ET" Type="varchar2" MaxLength="100" />
+    <Property Name="NIVEAU_DIPLOME_SUP_ET" Type="number" Precision="38" Scale="0" />
+    <Property Name="ETAB_ORIGINE" Type="varchar2" MaxLength="100" />
+    <Property Name="SPECIALITE_ESP_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="DATE_ENTREE_ESP_ET" Type="date" />
+    <Property Name="ANNEE_ENTREE_ESP_ET" Type="varchar2" MaxLength="4" />
+    <Property Name="CLASSE_COURANTE_ET" Type="varchar2" MaxLength="10" />
+    <Property Name="SITUATION_FINANCIERE_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="NIVEAU_COURANT_ET" Type="number" Precision="1" Scale="0" />
+    <Property Name="MOYENNE_DERN_SEMESTRE_ET" Type="number" Precision="5" Scale="2" />
+    <Property Name="RESULTAT_FINAL_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="DIPLOME_OBTENU_ESP_ET" Type="varchar2" MaxLength="2" />
+    <Property Name="DATE_SORTIE_ET" Type="date" />
+    <Property Name="OBSERVATION_ET" Type="varchar2" MaxLength="1000" />
+    <Property Name="SEXE" Type="varchar2" MaxLength="1" />
+    <Property Name="NATIONALITE" Type="varchar2" MaxLength="20" />
+    <Property Name="NUM_CIN_PASSEPORT" Type="varchar2" MaxLength="30" />
+    <Property Name="DATE_SAISIE" Type="date" />
+    <Property Name="DATE_DERN_MODIF" Type="date" />
+    <Property Name="AGENT" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_ORD" Type="varchar2" MaxLength="10" />
+    <Property Name="DATE_DELIVRANCE" Type="date" />
+    <Property Name="LIEU_DELIVRANCE" Type="varchar2" MaxLength="30" />
+    <Property Name="NIVEAU_ACCES" Type="number" Precision="1" Scale="0" />
+    <Property Name="NATURE_COURS" Type="varchar2" MaxLength="2" />
+    <Property Name="NATURE_PIECE_ID" Type="varchar2" MaxLength="1" />
+    <Property Name="ADRESSE_PARENT" Type="varchar2" MaxLength="100" />
+    <Property Name="CP_PARENT" Type="varchar2" MaxLength="6" />
+    <Property Name="VILLE_PARENT" Type="varchar2" MaxLength="30" />
+    <Property Name="PAYS_PARENT" Type="varchar2" MaxLength="30" />
+    <Property Name="CP_ET" Type="varchar2" MaxLength="6" />
+    <Property Name="VILLE_ET" Type="varchar2" MaxLength="30" />
+    <Property Name="PAYS_ET" Type="varchar2" MaxLength="30" />
+    <Property Name="E_MAIL_PARENT" Type="varchar2" MaxLength="60" />
+    <Property Name="TEL_PARENT" Type="varchar2" MaxLength="40" />
+    <Property Name="TYPE_ENREG_ET" Type="varchar2" MaxLength="1" />
+    <Property Name="DATE_LIEU_NAIS" Type="varchar2" MaxLength="50" />
+    <Property Name="CODE_ETAB_ORIGINE" Type="varchar2" MaxLength="3" />
+    <Property Name="CODE_SPEC_ORIGINE" Type="varchar2" MaxLength="3" />
+    <Property Name="LIB_SPEC_ORIGINE" Type="varchar2" MaxLength="100" />
+    <Property Name="CLASSE_PREC_ET" Type="varchar2" MaxLength="10" />
+    <Property Name="ID_ET_ORIGIN" Type="varchar2" MaxLength="10" />
+    <Property Name="ETAT" Type="varchar2" MaxLength="1" />
+    <Property Name="JUSTIF_ETAT" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_JUSTIF_ETAT" Type="varchar2" MaxLength="30" />
+    <Property Name="ID_ET_NEW" Type="varchar2" MaxLength="10" />
+    <Property Name="ID_ET_ORIGINE" Type="varchar2" MaxLength="10" />
+    <Property Name="DATE_LAST_CHANGE_ETAT" Type="date" />
+    <Property Name="DERN_UTILISATEUR" Type="varchar2" MaxLength="16" />
+    <Property Name="NUMCOMPTE" Type="varchar2" MaxLength="10" />
+    <Property Name="BANQUE" Type="varchar2" MaxLength="50" />
+    <Property Name="RIB_BANQUE" Type="varchar2" MaxLength="22" />
+    <Property Name="MP08" Type="varchar2" MaxLength="10" />
+    <Property Name="TYPE_ET" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_NATIONALITE" Type="varchar2" MaxLength="2" />
+    <Property Name="NUMPROMOTIONCS" Type="number" Precision="4" Scale="0" />
+    <Property Name="CODE_DECISION_SESSION_P_AP1" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_P_AP1" Type="varchar2" MaxLength="200" />
+    <Property Name="CODE_DECISION_SESSION_R_AP1" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_R_AP1" Type="varchar2" MaxLength="200" />
+    <Property Name="CODE_DECISION_SESSION_P_AP2" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_P_AP2" Type="varchar2" MaxLength="200" />
+    <Property Name="CODE_DECISION_SESSION_R_AP2" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_R_AP2" Type="varchar2" MaxLength="200" />
+    <Property Name="CODE_DECISION_SESSION_P_AP3" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_P_AP3" Type="varchar2" MaxLength="200" />
+    <Property Name="CODE_DECISION_SESSION_R_AP3" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_DECISION_SESSION_R_AP3" Type="varchar2" MaxLength="200" />
+    <Property Name="MOY_AN1" Type="number" Precision="5" Scale="2" />
+    <Property Name="MOY_AN2" Type="number" Precision="5" Scale="2" />
+    <Property Name="MOY_AN3" Type="number" Precision="5" Scale="2" />
+    <Property Name="MOY_R_AP2" Type="number" Precision="5" Scale="2" />
+    <Property Name="MOY_P_AP3" Type="number" Precision="5" Scale="2" />
+    <Property Name="MOY_R_AP3" Type="number" Precision="5" Scale="2" />
+    <Property Name="NB_IMP_RELEVE" Type="number" Precision="2" Scale="0" />
+    <Property Name="CODE_BARRE" Type="varchar2" MaxLength="20" />
+    <Property Name="MOY_BAC_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="LOGIN" Type="varchar2" MaxLength="50" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="50" />
+    <Property Name="FONCTION_PERE_ET" Type="varchar2" MaxLength="65" />
+    <Property Name="FONCTION_MERE_ET" Type="varchar2" MaxLength="65" />
+    <Property Name="TEL_MERE_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="TEL_PERE_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="EMAIL_PERE_ET" Type="varchar2" MaxLength="200" />
+    <Property Name="EMAIL_MERE_ET" Type="varchar2" MaxLength="200" />
+    <Property Name="NOM_PERE_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="NOM_MERE_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="ANNEE_BAC" Type="varchar2" MaxLength="10" />
+    <Property Name="ANNEE_DIPLOME" Type="varchar2" MaxLength="10" />
+    <Property Name="MOY_BAC_ET2" Type="number" Precision="5" Scale="2" />
+    <Property Name="ENTRETIEN_ANGLAIS" Type="number" Precision="5" Scale="2" />
+    <Property Name="ENTRETIEN_FRANCAIS" Type="number" Precision="5" Scale="2" />
+    <Property Name="ENS_ID_ENS" Type="varchar2" MaxLength="255" />
+    <Property Name="COMITE_ID_GRP" Type="number" Precision="10" Scale="0" />
+    <Property Name="FK_ENS" Type="varchar2" MaxLength="255" />
+    <Property Name="FK_ENSEI" Type="varchar2" MaxLength="255" />
+    <Property Name="TEL_ET1" Type="number" Precision="20" Scale="0" />
+    <Property Name="MOY_BAC" Type="number" Precision="5" Scale="2" />
+    <Property Name="FILIERE_PREPA" Type="varchar2" MaxLength="2" />
+    <Property Name="LIB_FILIERE_PREPA" Type="varchar2" MaxLength="20" />
+    <Property Name="DATEENTR" Type="varchar2" MaxLength="20" />
+    <Property Name="SCORE_FINAL" Type="number" Precision="10" Scale="3" />
+    <Property Name="SCORE_MIN_ADMIN" Type="number" Precision="10" Scale="3" />
+    <Property Name="USER_TRANSF_PREINSCRIT" Type="varchar2" MaxLength="16" />
+    <Property Name="DATE_TRANSF_PREINSCRIT" Type="date" />
+    <Property Name="NUM_LOT" Type="number" Precision="1" Scale="0" />
+    <Property Name="RECOMMANDATION" Type="varchar2" MaxLength="1" />
+    <Property Name="GOUVERNORAT" Type="varchar2" MaxLength="20" />
+    <Property Name="ADRESSE_MAIL_ESP" Type="varchar2" MaxLength="50" />
+    <Property Name="PWD_ET" Type="varchar2" MaxLength="20" />
+    <Property Name="PWD_ET_INIT" Type="varchar2" MaxLength="20" />
+    <Property Name="ESP_NOMPERSONNE_URG" Type="varchar2" MaxLength="60" />
+    <Property Name="ESP_TELPERSONNE_URG" Type="varchar2" MaxLength="30" />
+    <Property Name="ESP_ADDRESSERSONNE_URG" Type="varchar2" MaxLength="300" />
+    <Property Name="SCORE_DOSSIER" Type="number" Precision="10" Scale="6" />
+    <Property Name="DATE_SAISIE_SCORE_ENT" Type="date" />
+    <Property Name="ID_ENS_ENTRETIEN" Type="varchar2" MaxLength="20" />
+    <Property Name="SCORE_ENTRETIEN" Type="number" Precision="10" Scale="6" />
+    <Property Name="COMPTE_MOODEL" Type="varchar2" MaxLength="60" />
+    <Property Name="PWD_MOODEL" Type="varchar2" MaxLength="20" />
+    <Property Name="OBSERVATION_ENTRETIEN" Type="varchar2" MaxLength="500" />
+    <Property Name="SCORE_FRANCAIS" Type="number" Precision="10" Scale="6" />
+    <Property Name="SCORE_ANGLAIS" Type="number" Precision="10" Scale="6" />
+    <Property Name="SCORE_QI" Type="number" Precision="10" Scale="6" />
+    <Property Name="OPTION1" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION2" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION3" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION4" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION5" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION6" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION7" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION8" Type="varchar2" MaxLength="20" />
+    <Property Name="OPTION9" Type="varchar2" MaxLength="20" />
+    <Property Name="CHOIX3" Type="varchar2" MaxLength="2" />
+    <Property Name="TOTAL_TEST" Type="number" Precision="10" Scale="6" />
+    <Property Name="RANGP" Type="number" Precision="10" Scale="0" />
+    <Property Name="CODE_DECISION" Type="varchar2" MaxLength="2" />
+    <Property Name="NUM_SESSION" Type="varchar2" MaxLength="1" />
+    <Property Name="DATE_CALCUL_SCORE_F" Type="date" />
+    <Property Name="PAY_BAC" Type="varchar2" MaxLength="20" />
+    <Property Name="ETABL_NOM" Type="varchar2" MaxLength="200" />
+    <Property Name="ACTIVITE_ANNEE_PREC" Type="varchar2" MaxLength="50" />
+    <Property Name="SPECIALITE_SPECIFIQUE" Type="varchar2" MaxLength="2" />
+    <Property Name="LIBEL_SPECIALITE_SPECIFIQUE" Type="varchar2" MaxLength="200" />
+    <Property Name="CULTURE_MOODLE" Type="number" Precision="10" Scale="0" />
+    <Property Name="SESSION_BAC" Type="varchar2" MaxLength="1" />
+    <Property Name="ENVOI_MAIL" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_AFFECTATION_ENS" Type="varchar2" MaxLength="55" />
+    <Property Name="DATE_AFFECTATION_ENS" Type="date" />
+    <Property Name="MOY_R_AP1" Type="number" Precision="5" Scale="0" />
+    <Property Name="MOY_P_AP2" Type="number" Precision="5" Scale="0" />
+    <Property Name="MOY_P_AP1" Type="number" Precision="5" Scale="0" />
+    <Property Name="DATE_ADDMISSION" Type="date" />
+    <Property Name="MOTIF" Type="varchar2" MaxLength="200" />
+    <Property Name="GOUVER" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ESP_ETUDIANT" EntityType="Self.ESP_ETUDIANT" Schema="ADMIS_ESB" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

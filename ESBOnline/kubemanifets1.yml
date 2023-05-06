@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+items:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: esb-online-webforms-service
+    spec:
+      selector:
+        app: esb-online-webforms-app
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+      type: LoadBalancer
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: esb-online-webforms-app
+    spec:
+      replicas: 2
+      selector:
+        matchLabels:
+          app: esb-online-webforms-app
+      template:
+        metadata:
+          labels:
+            app: esb-online-webforms-app
+        spec:
+          nodeSelector:
+            beta.kubernetes.io/os=windows
+          containers:
+            - name: esb-online-webforms-app
+              image: 192.168.0.128:80/esb-online/esbonline:1.0/esbonline:1
+              ports:
+                - containerPort: 80

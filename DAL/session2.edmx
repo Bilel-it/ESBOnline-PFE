@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Model1StoreContainer">
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="session2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ESP_ETUDIANT_ENREG" EntityType="Model1.ESP_ETUDIANT_ENREG" />
+          <EntitySet Name="ESP_TEMP_ETUDIANT_ENREG" EntityType="Model1.ESP_TEMP_ETUDIANT_ENREG" />
+        </EntityContainer>
+        <EntityType Name="ESP_ETUDIANT_ENREG">
+          <Key>
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Name="ID_ET" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="true" />
+          <Property Name="NOM_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="PNOM_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_NAIS_ET" Type="DateTime" />
+          <Property Name="LIEU_NAIS_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="NATURE_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="FONCTION_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="ADRESSE_ET" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_ET" Type="String" MaxLength="120" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_PARENT_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="E_MAIL_ET" Type="String" MaxLength="60" Unicode="false" FixedLength="true" />
+          <Property Name="CYCLE_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="NATURE_BAC" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_BAC" Type="DateTime" />
+          <Property Name="NUM_BAC_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="ETAB_BAC" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="DIPLOME_SUP_ET" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="NIVEAU_DIPLOME_SUP_ET" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ETAB_ORIGINE" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="SPECIALITE_ESP_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_ENTREE_ESP_ET" Type="DateTime" />
+          <Property Name="ANNEE_ENTREE_ESP_ET" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="CLASSE_COURANTE_ET" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="SITUATION_FINANCIERE_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="NIVEAU_COURANT_ET" Type="Int16" />
+          <Property Name="MOYENNE_DERN_SEMESTRE_ET" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RESULTAT_FINAL_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="DIPLOME_OBTENU_ESP_ET" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_SORTIE_ET" Type="DateTime" />
+          <Property Name="OBSERVATION_ET" Type="String" MaxLength="1000" Unicode="false" FixedLength="true" />
+          <Property Name="SEXE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="NATIONALITE" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="NUM_CIN_PASSEPORT" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_SAISIE" Type="DateTime" />
+          <Property Name="DATE_DERN_MODIF" Type="DateTime" />
+          <Property Name="AGENT" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="NUM_ORD" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_DELIVRANCE" Type="DateTime" />
+          <Property Name="LIEU_DELIVRANCE" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="NIVEAU_ACCES" Type="Int16" />
+          <Property Name="NATURE_COURS" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="NATURE_PIECE_ID" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ADRESSE_PARENT" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="CP_PARENT" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="VILLE_PARENT" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="PAYS_PARENT" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="CP_ET" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="VILLE_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="PAYS_ET" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="E_MAIL_PARENT" Type="String" MaxLength="60" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_PARENT" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="TYPE_ENREG_ET" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_LIEU_NAIS" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_ETAB_ORIGINE" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_SPEC_ORIGINE" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_SPEC_ORIGINE" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="CLASSE_PREC_ET" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="ID_ET_ORIGIN" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="ETAT" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="JUSTIF_ETAT" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_JUSTIF_ETAT" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="ID_ET_NEW" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="ID_ET_ORIGINE" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_LAST_CHANGE_ETAT" Type="DateTime" />
+          <Property Name="DERN_UTILISATEUR" Type="String" MaxLength="16" Unicode="false" FixedLength="true" />
+          <Property Name="NUMCOMPTE" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="BANQUE" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="RIB_BANQUE" Type="String" MaxLength="22" Unicode="false" FixedLength="true" />
+          <Property Name="MP08" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="TYPE_ET" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_NATIONALITE" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="NUMPROMOTIONCS" Type="Int16" />
+          <Property Name="CODE_DECISION_SESSION_P_AP1" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_P_AP1" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_DECISION_SESSION_R_AP1" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_R_AP1" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_DECISION_SESSION_P_AP2" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_P_AP2" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_DECISION_SESSION_R_AP2" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_R_AP2" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_DECISION_SESSION_P_AP3" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_P_AP3" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="CODE_DECISION_SESSION_R_AP3" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LIB_DECISION_SESSION_R_AP3" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+          <Property Name="MOY_P_AP1" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP1" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP3" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP3" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NB_IMP_RELEVE" Type="Int16" />
+          <Property Name="CODE_BARRE" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="MOY_BAC_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="LOGIN" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="FONCTION_PERE_ET" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="FONCTION_MERE_ET" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_MERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_PERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="EMAIL_PERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="EMAIL_MERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="NOM_PERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="NOM_MERE_ET" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="ANNEE_BAC" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="ANNEE_DIPLOME" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="MOY_BAC_ET2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_ANGLAIS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_FRANCAIS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENS_ID_ENS" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+          <Property Name="COMITE_ID_GRP" Type="Int32" />
+          <Property Name="FK_ENS" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+          <Property Name="FK_ENSEI" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+          <Property Name="TEL_ET1" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="DATEENTR" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="DATE_CONVOCATION" Type="DateTime" />
+          <Property Name="DATE_TEST" Type="DateTime" />
+          <Property Name="SCORE_FINAL" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ADMIS" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SCORE_EP_ECRITE" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="SCORE_ENTRETIEN" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="SCORE_DOSSIER" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="SCORE_FRANCAIS" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="SCORE_ANGLAIS" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="SCORE_QI" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="ANNEE_ADMISSION" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="CODE_DECISION" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="LIB_DECISION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DECISION_ENVOYEE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="DATE_ENVOIE_DECISION" Type="DateTime" />
+          <Property Name="TYPE_DECISION" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="SCORE_TEST" Type="Int32" />
+          <Property Name="ID_ENS_ENTRETIEN" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SCORE_FINAL_INIT" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="GOUVERNORAT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ENVOI_DOSSIER" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="MOY_BAC" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="NUM_SESSION" Type="Int16" />
+          <Property Name="ID_ENS" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="CONVOCATION" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONVOCATION_ENTRETIEN" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ESP_TEMP_ETUDIANT_ENREG">
+          <Key>
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Type="String" Name="ID_ET" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ID_ENS_ENTRETIEN" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SCORE_ENTRETIEN" Precision="10" Scale="6" />
+          <Property Type="DateTime" Name="DATE_SAISIE" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="session2">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="session2" ZoomLevel="17">
+        <EntityTypeShape EntityType="Model1.ESP_ETUDIANT_ENREG" Width="2.25" PointX="0.75" PointY="0.75" Height="23.614848632812503" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ESP_TEMP_ETUDIANT_ENREG" Width="2.25" PointX="3.875" PointY="0.875" Height="1.5923063151041665" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

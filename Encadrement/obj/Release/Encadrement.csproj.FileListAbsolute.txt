@@ -1,0 +1,10 @@
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\bin\Release\Encadrement.dll
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\bin\Release\Encadrement.pdb
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\bin\Release\DAL.dll
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\bin\Release\DAL.pdb
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\bin\Release\DAL.dll.config
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\obj\Release\Encadrement.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\obj\Release\Encadrement.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\obj\Release\Encadrement.csproj.CopyComplete
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\obj\Release\Encadrement.dll
+C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\Encadrement\obj\Release\Encadrement.pdb

@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: esbonline
+  namespace: esbonline
+  labels:
+    app: esbonline
+spec:
+  ports:
+    # the port that this service should serve on
+    - port: 80
+      targetPort: 80
+  selector:
+    app: esbonline
+  type: LoadBalancer
+  loadBalancerIP: 192.168.0.131
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: esbonline
+  namespace: esbonline
+  labels:
+    app: esbonline
+  name: esbonline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: esbonline
+  template:
+    metadata:
+      labels:
+        app: esbonline
+      name: esbonline
+    spec:
+     containers:
+      - name: esbonline
+        image: 192.168.0.128:5000/esb-online/esbonline:1.0/esbonline:1.0
+        ports:
+        - containerPort: 80
+     nodeSelector:
+      kubernetes.io/os: windows

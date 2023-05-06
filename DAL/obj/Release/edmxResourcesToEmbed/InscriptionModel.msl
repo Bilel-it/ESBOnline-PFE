@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ESP_MODULE">
+      <EntityTypeMapping TypeName="Model.ESP_MODULE">
+        <MappingFragment StoreEntitySet="ESP_MODULE">
+          <ScalarProperty Name="CODE_MODULE" ColumnName="CODE_MODULE" />
+          <ScalarProperty Name="DESIGNATION" ColumnName="DESIGNATION" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="NB_HEURES" ColumnName="NB_HEURES" />
+          <ScalarProperty Name="ETAT" ColumnName="ETAT" />
+          <ScalarProperty Name="UP" ColumnName="UP" />
+          <ScalarProperty Name="COEF" ColumnName="COEF" />
+          <ScalarProperty Name="NUM_PANIER" ColumnName="NUM_PANIER" />
+          <ScalarProperty Name="A_EVALUER" ColumnName="A_EVALUER" />
+          <ScalarProperty Name="TYPE_EPREUVE" ColumnName="TYPE_EPREUVE" />
+          <ScalarProperty Name="CODE_MATIERE_EDUSERV" ColumnName="CODE_MATIERE_EDUSERV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_ENSEIGNANT">
+      <EntityTypeMapping TypeName="Model.ESP_ENSEIGNANT">
+        <MappingFragment StoreEntitySet="ESP_ENSEIGNANT">
+          <ScalarProperty Name="PNOM" ColumnName="PNOM" />
+          <ScalarProperty Name="NOM" ColumnName="NOM" />
+          <ScalarProperty Name="CODE_ENS_EDUSERV" ColumnName="CODE_ENS_EDUSERV" />
+          <ScalarProperty Name="CHEF_DEPT" ColumnName="CHEF_DEPT" />
+          <ScalarProperty Name="CODE_DEPT" ColumnName="CODE_DEPT" />
+          <ScalarProperty Name="PWD_INIT" ColumnName="PWD_INIT" />
+          <ScalarProperty Name="ORGANISME" ColumnName="ORGANISME" />
+          <ScalarProperty Name="LIB_GRADE_ACTUELLE" ColumnName="LIB_GRADE_ACTUELLE" />
+          <ScalarProperty Name="CODE_GRADE_ACTUEL" ColumnName="CODE_GRADE_ACTUEL" />
+          <ScalarProperty Name="LIB_GRADE_ENTREE" ColumnName="LIB_GRADE_ENTREE" />
+          <ScalarProperty Name="CODE_GRADE_ENTREE" ColumnName="CODE_GRADE_ENTREE" />
+          <ScalarProperty Name="MAIL_ENS" ColumnName="MAIL_ENS" />
+          <ScalarProperty Name="DATE_DEB_UP" ColumnName="DATE_DEB_UP" />
+          <ScalarProperty Name="UP" ColumnName="UP" />
+          <ScalarProperty Name="TYPE_UP" ColumnName="TYPE_UP" />
+          <ScalarProperty Name="FK_CMT" ColumnName="FK_CMT" />
+          <ScalarProperty Name="COMITE_ID_GRP" ColumnName="COMITE_ID_GRP" />
+          <ScalarProperty Name="CHEFCOMITE" ColumnName="CHEFCOMITE" />
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+          <ScalarProperty Name="DS_ENS" ColumnName="DS_ENS" />
+          <ScalarProperty Name="DE_ENS" ColumnName="DE_ENS" />
+          <ScalarProperty Name="DN_ENS" ColumnName="DN_ENS" />
+          <ScalarProperty Name="CNSS_ENS" ColumnName="CNSS_ENS" />
+          <ScalarProperty Name="TEL2" ColumnName="TEL2" />
+          <ScalarProperty Name="TEL1" ColumnName="TEL1" />
+          <ScalarProperty Name="ETAT_CIVIL_ENS" ColumnName="ETAT_CIVIL_ENS" />
+          <ScalarProperty Name="SEXE_ENS" ColumnName="SEXE_ENS" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="PRENOM_ENS" ColumnName="PRENOM_ENS" />
+          <ScalarProperty Name="PWD_ENS" ColumnName="PWD_ENS" />
+          <ScalarProperty Name="OBSERVATION" ColumnName="OBSERVATION" />
+          <ScalarProperty Name="ETAT" ColumnName="ETAT" />
+          <ScalarProperty Name="DATE_DERN_MODIF" ColumnName="DATE_DERN_MODIF" />
+          <ScalarProperty Name="DATE_SAISIE" ColumnName="DATE_SAISIE" />
+          <ScalarProperty Name="NIVEAU" ColumnName="NIVEAU" />
+          <ScalarProperty Name="DATE_REC" ColumnName="DATE_REC" />
+          <ScalarProperty Name="TYPE_ENS" ColumnName="TYPE_ENS" />
+          <ScalarProperty Name="NOM_ENS" ColumnName="NOM_ENS" />
+          <ScalarProperty Name="ID_ENS" ColumnName="ID_ENS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_NOMENCLATURE">
+      <EntityTypeMapping TypeName="Model.CODE_NOMENCLATURE">
+        <MappingFragment StoreEntitySet="CODE_NOMENCLATURE">
+          <ScalarProperty Name="LIB_NOME" ColumnName="LIB_NOME" />
+          <ScalarProperty Name="CODE_NOME" ColumnName="CODE_NOME" />
+          <ScalarProperty Name="CODE_STR" ColumnName="CODE_STR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_CERTIF">
+      <EntityTypeMapping TypeName="Model.ESP_CERTIF">
+        <MappingFragment StoreEntitySet="ESP_CERTIF">
+          <ScalarProperty Name="NOTE_EXAM" ColumnName="NOTE_EXAM" />
+          <ScalarProperty Name="CODE_MODULE" ColumnName="CODE_MODULE" />
+          <ScalarProperty Name="CLASSE" ColumnName="CLASSE" />
+          <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+          <ScalarProperty Name="NOM_JETON" ColumnName="NOM_JETON" />
+          <ScalarProperty Name="HEURE_INS" ColumnName="HEURE_INS" />
+          <ScalarProperty Name="DATE_INS" ColumnName="DATE_INS" />
+          <ScalarProperty Name="DATE_MISEJOUR" ColumnName="DATE_MISEJOUR" />
+          <ScalarProperty Name="ADRESSE_ET" ColumnName="ADRESSE_ET" />
+          <ScalarProperty Name="PRENOM_ET" ColumnName="PRENOM_ET" />
+          <ScalarProperty Name="NOM_ET" ColumnName="NOM_ET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPT_CERT">
+      <EntityTypeMapping TypeName="Model.COMPT_CERT">
+        <MappingFragment StoreEntitySet="COMPT_CERT">
+          <ScalarProperty Name="TYPE_CERT" ColumnName="TYPE_CERT" />
+          <ScalarProperty Name="CPT" ColumnName="CPT" />
+          <ScalarProperty Name="HEURE" ColumnName="HEURE" />
+          <ScalarProperty Name="DATE_CERT" ColumnName="DATE_CERT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_MODULE_PANIER_CLASSE_SAISO">
+      <EntityTypeMapping TypeName="Model.ESP_MODULE_PANIER_CLASSE_SAISO">
+        <MappingFragment StoreEntitySet="ESP_MODULE_PANIER_CLASSE_SAISO">
+          <ScalarProperty Name="HEURE_RAT" ColumnName="HEURE_RAT" />
+          <ScalarProperty Name="DATE_RAT" ColumnName="DATE_RAT" />
+          <ScalarProperty Name="SALLE" ColumnName="SALLE" />
+          <ScalarProperty Name="TYPE_EPREUVE" ColumnName="TYPE_EPREUVE" />
+          <ScalarProperty Name="NB_ECTS" ColumnName="NB_ECTS" />
+          <ScalarProperty Name="CODE_UE" ColumnName="CODE_UE" />
+          <ScalarProperty Name="CHARGE_ENS5_P2" ColumnName="CHARGE_ENS5_P2" />
+          <ScalarProperty Name="CHARGE_ENS5_P1" ColumnName="CHARGE_ENS5_P1" />
+          <ScalarProperty Name="CHARGE_ENS4_P2" ColumnName="CHARGE_ENS4_P2" />
+          <ScalarProperty Name="CHARGE_ENS4_P1" ColumnName="CHARGE_ENS4_P1" />
+          <ScalarProperty Name="CHARGE_ENS3_P2" ColumnName="CHARGE_ENS3_P2" />
+          <ScalarProperty Name="CHARGE_ENS3_P1" ColumnName="CHARGE_ENS3_P1" />
+          <ScalarProperty Name="ID_ENS5" ColumnName="ID_ENS5" />
+          <ScalarProperty Name="ID_ENS4" ColumnName="ID_ENS4" />
+          <ScalarProperty Name="ID_ENS3" ColumnName="ID_ENS3" />
+          <ScalarProperty Name="SEANCE_UNIQUE" ColumnName="SEANCE_UNIQUE" />
+          <ScalarProperty Name="CHARGE_ENS2_P2" ColumnName="CHARGE_ENS2_P2" />
+          <ScalarProperty Name="CHARGE_ENS2_P1" ColumnName="CHARGE_ENS2_P1" />
+          <ScalarProperty Name="CHARGE_ENS1_P2" ColumnName="CHARGE_ENS1_P2" />
+          <ScalarProperty Name="CHARGE_ENS1_P1" ColumnName="CHARGE_ENS1_P1" />
+          <ScalarProperty Name="CHARGE_P2" ColumnName="CHARGE_P2" />
+          <ScalarProperty Name="CHARGE_P1" ColumnName="CHARGE_P1" />
+          <ScalarProperty Name="AP_CS" ColumnName="AP_CS" />
+          <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="SALLE_EXAM2" ColumnName="SALLE_EXAM2" />
+          <ScalarProperty Name="SURVEILLANT2" ColumnName="SURVEILLANT2" />
+          <ScalarProperty Name="SALLE_EXAM" ColumnName="SALLE_EXAM" />
+          <ScalarProperty Name="HEURE_EXAM" ColumnName="HEURE_EXAM" />
+          <ScalarProperty Name="SURVEILLANT" ColumnName="SURVEILLANT" />
+          <ScalarProperty Name="NB_HEURES_ENS2" ColumnName="NB_HEURES_ENS2" />
+          <ScalarProperty Name="NB_HEURES_ENS" ColumnName="NB_HEURES_ENS" />
+          <ScalarProperty Name="ID_ENS2" ColumnName="ID_ENS2" />
+          <ScalarProperty Name="ID_ENS" ColumnName="ID_ENS" />
+          <ScalarProperty Name="ACOMPTABILISER" ColumnName="ACOMPTABILISER" />
+          <ScalarProperty Name="NB_HORAIRE_REALISES" ColumnName="NB_HORAIRE_REALISES" />
+          <ScalarProperty Name="DATE_RATTRAPAGE" ColumnName="DATE_RATTRAPAGE" />
+          <ScalarProperty Name="DATE_EXAMEN" ColumnName="DATE_EXAMEN" />
+          <ScalarProperty Name="DATE_FIN" ColumnName="DATE_FIN" />
+          <ScalarProperty Name="DATE_DEBUT" ColumnName="DATE_DEBUT" />
+          <ScalarProperty Name="NUM_PERIODFE" ColumnName="NUM_PERIODFE" />
+          <ScalarProperty Name="NUM_SEMESTRE" ColumnName="NUM_SEMESTRE" />
+          <ScalarProperty Name="COEF" ColumnName="COEF" />
+          <ScalarProperty Name="NB_HEURES" ColumnName="NB_HEURES" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+          <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+          <ScalarProperty Name="CODE_CL" ColumnName="CODE_CL" />
+          <ScalarProperty Name="NUM_PANIER" ColumnName="NUM_PANIER" />
+          <ScalarProperty Name="CODE_MODULE" ColumnName="CODE_MODULE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTETE_RECLAMATION">
+      <EntityTypeMapping TypeName="Model.ENTETE_RECLAMATION">
+        <MappingFragment StoreEntitySet="ENTETE_RECLAMATION">
+          <ScalarProperty Name="ID_ENS" ColumnName="ID_ENS" />
+          <ScalarProperty Name="DESIGNATION" ColumnName="DESIGNATION" />
+          <ScalarProperty Name="DATE_RECLAMATION" ColumnName="DATE_RECLAMATION" />
+          <ScalarProperty Name="TYPE_RECLAMATION" ColumnName="TYPE_RECLAMATION" />
+          <ScalarProperty Name="NOM_ENS" ColumnName="NOM_ENS" />
+          <ScalarProperty Name="ID_ENTETE_RECLAMATION" ColumnName="ID_ENTETE_RECLAMATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_ORIENTATION">
+      <EntityTypeMapping TypeName="Model.ESP_ORIENTATION">
+        <MappingFragment StoreEntitySet="ESP_ORIENTATION">
+          <ScalarProperty Name="NUMCHOIX" ColumnName="NUMCHOIX" />
+          <ScalarProperty Name="SCORCHFINAL" ColumnName="SCORCHFINAL" />
+          <ScalarProperty Name="CHFINAL" ColumnName="CHFINAL" />
+          <ScalarProperty Name="SCORECH10" ColumnName="SCORECH10" />
+          <ScalarProperty Name="SCORECH9" ColumnName="SCORECH9" />
+          <ScalarProperty Name="SCORECH8" ColumnName="SCORECH8" />
+          <ScalarProperty Name="SCORECH7" ColumnName="SCORECH7" />
+          <ScalarProperty Name="SCORECH6" ColumnName="SCORECH6" />
+          <ScalarProperty Name="SCORECH5" ColumnName="SCORECH5" />
+          <ScalarProperty Name="SCORECH4" ColumnName="SCORECH4" />
+          <ScalarProperty Name="SCORECH3" ColumnName="SCORECH3" />
+          <ScalarProperty Name="SCORECH2" ColumnName="SCORECH2" />
+          <ScalarProperty Name="SCORECH1" ColumnName="SCORECH1" />
+          <ScalarProperty Name="CH10" ColumnName="CH10" />
+          <ScalarProperty Name="CH9" ColumnName="CH9" />
+          <ScalarProperty Name="CH8" ColumnName="CH8" />
+          <ScalarProperty Name="CH7" ColumnName="CH7" />
+          <ScalarProperty Name="CH6" ColumnName="CH6" />
+          <ScalarProperty Name="CH5" ColumnName="CH5" />
+          <ScalarProperty Name="DATE_SAISIE" ColumnName="DATE_SAISIE" />
+          <ScalarProperty Name="CODE_CL" ColumnName="CODE_CL" />
+          <ScalarProperty Name="SPECIALITE" ColumnName="SPECIALITE" />
+          <ScalarProperty Name="CH4" ColumnName="CH4" />
+          <ScalarProperty Name="CH3" ColumnName="CH3" />
+          <ScalarProperty Name="CH2" ColumnName="CH2" />
+          <ScalarProperty Name="CH1" ColumnName="CH1" />
+          <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+          <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_CCNA3">
+      <EntityTypeMapping TypeName="Model.ESP_CCNA3">
+        <MappingFragment StoreEntitySet="ESP_CCNA3">
+          <ScalarProperty Name="ID_INSCRIPTION" ColumnName="ID_INSCRIPTION" />
+          <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+          <ScalarProperty Name="NOM_JETON" ColumnName="NOM_JETON" />
+          <ScalarProperty Name="HEURE_INS" ColumnName="HEURE_INS" />
+          <ScalarProperty Name="DATE_INS" ColumnName="DATE_INS" />
+          <ScalarProperty Name="DATE_MISEJOUR" ColumnName="DATE_MISEJOUR" />
+          <ScalarProperty Name="ADRESSE_ET" ColumnName="ADRESSE_ET" />
+          <ScalarProperty Name="PRENOM_ET" ColumnName="PRENOM_ET" />
+          <ScalarProperty Name="NOM_ET" ColumnName="NOM_ET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_SAISON_CLASSE">
+      <EntityTypeMapping TypeName="Model.ESP_SAISON_CLASSE">
+        <MappingFragment StoreEntitySet="ESP_SAISON_CLASSE">
+          <ScalarProperty Name="TYPE_PV" ColumnName="TYPE_PV" />
+          <ScalarProperty Name="FILIERE" ColumnName="FILIERE" />
+          <ScalarProperty Name="NIVEAU_ACCES" ColumnName="NIVEAU_ACCES" />
+          <ScalarProperty Name="PV_SR_SAVED" ColumnName="PV_SR_SAVED" />
+          <ScalarProperty Name="PV_SP_SAVED" ColumnName="PV_SP_SAVED" />
+          <ScalarProperty Name="CL_AVEC_DISPENSE" ColumnName="CL_AVEC_DISPENSE" />
+          <ScalarProperty Name="CODE_CLS1" ColumnName="CODE_CLS1" />
+          <ScalarProperty Name="CLASSE_S2" ColumnName="CLASSE_S2" />
+          <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+          <ScalarProperty Name="DATE_ECLATEMENT" ColumnName="DATE_ECLATEMENT" />
+          <ScalarProperty Name="CL_ECLATE" ColumnName="CL_ECLATE" />
+          <ScalarProperty Name="SEMESTRE" ColumnName="SEMESTRE" />
+          <ScalarProperty Name="CLASSE_ENTREPRISE" ColumnName="CLASSE_ENTREPRISE" />
+          <ScalarProperty Name="NB_SEANCE" ColumnName="NB_SEANCE" />
+          <ScalarProperty Name="TYPE_CLASSE" ColumnName="TYPE_CLASSE" />
+          <ScalarProperty Name="NATURE" ColumnName="NATURE" />
+          <ScalarProperty Name="SALLE_SECONDAIRE_2" ColumnName="SALLE_SECONDAIRE_2" />
+          <ScalarProperty Name="SALLE_SECONDAIRE_1" ColumnName="SALLE_SECONDAIRE_1" />
+          <ScalarProperty Name="SALLE_PRINCIPALE" ColumnName="SALLE_PRINCIPALE" />
+          <ScalarProperty Name="NB_ETUDIANT" ColumnName="NB_ETUDIANT" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DATE_DEMARRAGE" ColumnName="DATE_DEMARRAGE" />
+          <ScalarProperty Name="CODE_CL" ColumnName="CODE_CL" />
+          <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+          <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_INSCRI">
+      <EntityTypeMapping TypeName="Model.ESP_INSCRI">
+        <MappingFragment StoreEntitySet="ESP_INSCRI">
+          <ScalarProperty Name="TYPE_CCNA" ColumnName="TYPE_CCNA" />
+          <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+          <ScalarProperty Name="NOM_JETON" ColumnName="NOM_JETON" />
+          <ScalarProperty Name="HEURE_INS" ColumnName="HEURE_INS" />
+          <ScalarProperty Name="DATE_INS" ColumnName="DATE_INS" />
+          <ScalarProperty Name="DATE_MISEJOUR" ColumnName="DATE_MISEJOUR" />
+          <ScalarProperty Name="ADRESSE_ET" ColumnName="ADRESSE_ET" />
+          <ScalarProperty Name="PRENOM_ET" ColumnName="PRENOM_ET" />
+          <ScalarProperty Name="NOM_ET" ColumnName="NOM_ET" />
+          <ScalarProperty Name="ID_INSCRIPTION" ColumnName="ID_INSCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JETONs">
+      <EntityTypeMapping TypeName="Model.JETON">
+        <MappingFragment StoreEntitySet="JETON">
+          <ScalarProperty Name="TYPE_CCNA" ColumnName="TYPE_CCNA" />
+          <ScalarProperty Name="NOM_JETON" ColumnName="NOM_JETON" />
+          <ScalarProperty Name="ID_JETON" ColumnName="ID_JETON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECLAMATIONNs">
+      <EntityTypeMapping TypeName="Model.RECLAMATIONN">
+        <MappingFragment StoreEntitySet="RECLAMATIONN">
+          <ScalarProperty Name="UTILISATEUR" ColumnName="UTILISATEUR" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DATE_TRAITEMENT" ColumnName="DATE_TRAITEMENT" />
+          <ScalarProperty Name="TRAITER" ColumnName="TRAITER" />
+          <ScalarProperty Name="ID_RECLAMTION" ColumnName="ID_RECLAMTION" />
+          <ScalarProperty Name="ID_ENTETE_RECLAMATION" ColumnName="ID_ENTETE_RECLAMATION" />
+          <ScalarProperty Name="NOM_ENS" ColumnName="NOM_ENS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOCIETEs">
+      <EntityTypeMapping TypeName="Model.SOCIETE">
+        <MappingFragment StoreEntitySet="SOCIETE">
+          <ScalarProperty Name="BLOCK_OTHER_RAT" ColumnName="BLOCK_OTHER_RAT" />
+          <ScalarProperty Name="NBH_SEMAINE" ColumnName="NBH_SEMAINE" />
+          <ScalarProperty Name="TAUX_MAX_ABSENCE" ColumnName="TAUX_MAX_ABSENCE" />
+          <ScalarProperty Name="ACTIVER_TAUX_ABSENCE" ColumnName="ACTIVER_TAUX_ABSENCE" />
+          <ScalarProperty Name="QUOTA_ECTS_NV" ColumnName="QUOTA_ECTS_NV" />
+          <ScalarProperty Name="TOT_ECTS_ADMIS" ColumnName="TOT_ECTS_ADMIS" />
+          <ScalarProperty Name="VERROU_RESUL" ColumnName="VERROU_RESUL" />
+          <ScalarProperty Name="ACTIVE_MODULE_OPT" ColumnName="ACTIVE_MODULE_OPT" />
+          <ScalarProperty Name="ACTIVE_MP_ENS" ColumnName="ACTIVE_MP_ENS" />
+          <ScalarProperty Name="ACTIVE_DISPENSE_AUTO" ColumnName="ACTIVE_DISPENSE_AUTO" />
+          <ScalarProperty Name="CREDIT_MAX" ColumnName="CREDIT_MAX" />
+          <ScalarProperty Name="MAX_TAUX_CREDIT_ACCEPTE" ColumnName="MAX_TAUX_CREDIT_ACCEPTE" />
+          <ScalarProperty Name="MAX_VAL_CREDIT_ACCEPTE" ColumnName="MAX_VAL_CREDIT_ACCEPTE" />
+          <ScalarProperty Name="CONTROL_BALCKLISTE" ColumnName="CONTROL_BALCKLISTE" />
+          <ScalarProperty Name="DATEDEMARRAGECS" ColumnName="DATEDEMARRAGECS" />
+          <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+          <ScalarProperty Name="LIAISON_SITE" ColumnName="LIAISON_SITE" />
+          <ScalarProperty Name="TAUX_RGLT" ColumnName="TAUX_RGLT" />
+          <ScalarProperty Name="LIAISON_FINANCIER" ColumnName="LIAISON_FINANCIER" />
+          <ScalarProperty Name="ID_SERV_SCOLAIRE" ColumnName="ID_SERV_SCOLAIRE" />
+          <ScalarProperty Name="ID_DIRET" ColumnName="ID_DIRET" />
+          <ScalarProperty Name="MIN_PANIER" ColumnName="MIN_PANIER" />
+          <ScalarProperty Name="FR_SCOLARITE_CJ" ColumnName="FR_SCOLARITE_CJ" />
+          <ScalarProperty Name="FR_SCOLARITE_CS" ColumnName="FR_SCOLARITE_CS" />
+          <ScalarProperty Name="GERER_SEMESTRE" ColumnName="GERER_SEMESTRE" />
+          <ScalarProperty Name="ID_VACATAIRE" ColumnName="ID_VACATAIRE" />
+          <ScalarProperty Name="BS_RACHAT" ColumnName="BS_RACHAT" />
+          <ScalarProperty Name="BI_RACHAT" ColumnName="BI_RACHAT" />
+          <ScalarProperty Name="MIN_MOY_RESUSSITE" ColumnName="MIN_MOY_RESUSSITE" />
+          <ScalarProperty Name="TAUX_EXAM_WITH_TP_CC" ColumnName="TAUX_EXAM_WITH_TP_CC" />
+          <ScalarProperty Name="TAUX_EXAM_WITH_CC" ColumnName="TAUX_EXAM_WITH_CC" />
+          <ScalarProperty Name="CHEMIN_FICHIER_DONNEE" ColumnName="CHEMIN_FICHIER_DONNEE" />
+          <ScalarProperty Name="NUM_SEMESTRE_ACTUEL" ColumnName="NUM_SEMESTRE_ACTUEL" />
+          <ScalarProperty Name="DATE_DEBUT_SAISON" ColumnName="DATE_DEBUT_SAISON" />
+          <ScalarProperty Name="TIMBRE_FISCAL" ColumnName="TIMBRE_FISCAL" />
+          <ScalarProperty Name="TIMB_FISCAL" ColumnName="TIMB_FISCAL" />
+          <ScalarProperty Name="SYMBOLE" ColumnName="SYMBOLE" />
+          <ScalarProperty Name="NB_SCEANCE_JOUR" ColumnName="NB_SCEANCE_JOUR" />
+          <ScalarProperty Name="NB_MAX_ABS_MODULE" ColumnName="NB_MAX_ABS_MODULE" />
+          <ScalarProperty Name="TAUX_ORALE" ColumnName="TAUX_ORALE" />
+          <ScalarProperty Name="TAUX_TP" ColumnName="TAUX_TP" />
+          <ScalarProperty Name="TAUX_DS" ColumnName="TAUX_DS" />
+          <ScalarProperty Name="TAUX_EXAM" ColumnName="TAUX_EXAM" />
+          <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+          <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+          <ScalarProperty Name="CODE_RGLT_ESPECE" ColumnName="CODE_RGLT_ESPECE" />
+          <ScalarProperty Name="CODE_RGLT_COMPTANT" ColumnName="CODE_RGLT_COMPTANT" />
+          <ScalarProperty Name="RC" ColumnName="RC" />
+          <ScalarProperty Name="BANQUE" ColumnName="BANQUE" />
+          <ScalarProperty Name="CODE_TVA" ColumnName="CODE_TVA" />
+          <ScalarProperty Name="RIB" ColumnName="RIB" />
+          <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+          <ScalarProperty Name="DATE_MAJ" ColumnName="DATE_MAJ" />
+          <ScalarProperty Name="DATE_CR" ColumnName="DATE_CR" />
+          <ScalarProperty Name="CODE_POSTAL" ColumnName="CODE_POSTAL" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="SIGLE" ColumnName="SIGLE" />
+          <ScalarProperty Name="FAX_SOC" ColumnName="FAX_SOC" />
+          <ScalarProperty Name="TEL_SOC" ColumnName="TEL_SOC" />
+          <ScalarProperty Name="ADR_SOC" ColumnName="ADR_SOC" />
+          <ScalarProperty Name="NOM_SOC" ColumnName="NOM_SOC" />
+          <ScalarProperty Name="CODE_SOC" ColumnName="CODE_SOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESP_INSCRIPTION">
+      <EntityTypeMapping TypeName="Model.ESP_INSCRIPTION">
+        <MappingFragment StoreEntitySet="ESP_INSCRIPTION">
+          <ScalarProperty Name="NUM_ANNUEL_DIPLOME" ColumnName="NUM_ANNUEL_DIPLOME" />
+          <ScalarProperty Name="RANG_SP" ColumnName="RANG_SP" />
+          <ScalarProperty Name="USER_LANG_MODIF" ColumnName="USER_LANG_MODIF" />
+          <ScalarProperty Name="ETAT_INS_TEST_NIV" ColumnName="ETAT_INS_TEST_NIV" />
+          <ScalarProperty Name="TEST_TOEIC" ColumnName="TEST_TOEIC" />
+          <ScalarProperty Name="PREP_TOEIC" ColumnName="PREP_TOEIC" />
+          <ScalarProperty Name="DATE_TEST_ANG" ColumnName="DATE_TEST_ANG" />
+          <ScalarProperty Name="DATE_TEST_FR" ColumnName="DATE_TEST_FR" />
+          <ScalarProperty Name="NIV_ACQUIS_ANGLAIS" ColumnName="NIV_ACQUIS_ANGLAIS" />
+          <ScalarProperty Name="NB_ECTS_SR" ColumnName="NB_ECTS_SR" />
+          <ScalarProperty Name="NB_ECTS_SP" ColumnName="NB_ECTS_SP" />
+          <ScalarProperty Name="RESERVE" ColumnName="RESERVE" />
+          <ScalarProperty Name="MAJ_NIVEAU_DEFINITIF" ColumnName="MAJ_NIVEAU_DEFINITIF" />
+          <ScalarProperty Name="NIV_ACQUIS_FRANCAIS" ColumnName="NIV_ACQUIS_FRANCAIS" />
+          <ScalarProperty Name="DATE_LIM_PROLONG_RGLT" ColumnName="DATE_LIM_PROLONG_RGLT" />
+          <ScalarProperty Name="ADMIS_TS" ColumnName="ADMIS_TS" />
+          <ScalarProperty Name="MOY_RAT_AV_RACH" ColumnName="MOY_RAT_AV_RACH" />
+          <ScalarProperty Name="ADMIS_RACH" ColumnName="ADMIS_RACH" />
+          <ScalarProperty Name="LIB_DECISION_SESSION_RAT2" ColumnName="LIB_DECISION_SESSION_RAT2" />
+          <ScalarProperty Name="CODE_DECISION_SESSION_RAT2" ColumnName="CODE_DECISION_SESSION_RAT2" />
+          <ScalarProperty Name="MOY_RAT2" ColumnName="MOY_RAT2" />
+          <ScalarProperty Name="DATE_LAST_MODIF_RAT2" ColumnName="DATE_LAST_MODIF_RAT2" />
+          <ScalarProperty Name="ETAT_ENTRETIEN" ColumnName="ETAT_ENTRETIEN" />
+          <ScalarProperty Name="NB_IMP_RELEVE" ColumnName="NB_IMP_RELEVE" />
+          <ScalarProperty Name="CREDIT_ANT" ColumnName="CREDIT_ANT" />
+          <ScalarProperty Name="DATE_LAST_MAJ_DECISION_RATT" ColumnName="DATE_LAST_MAJ_DECISION_RATT" />
+          <ScalarProperty Name="DATE_LAST_MAJ_DECISION_PRINC" ColumnName="DATE_LAST_MAJ_DECISION_PRINC" />
+          <ScalarProperty Name="NB_IMP_ATTEST_REUSSITE" ColumnName="NB_IMP_ATTEST_REUSSITE" />
+          <ScalarProperty Name="LIB_DECISION_SESSION_RAT" ColumnName="LIB_DECISION_SESSION_RAT" />
+          <ScalarProperty Name="CODE_DECISION_SESSION_RAT" ColumnName="CODE_DECISION_SESSION_RAT" />
+          <ScalarProperty Name="LIB_DECISION_SESSION_P" ColumnName="LIB_DECISION_SESSION_P" />
+          <ScalarProperty Name="CODE_DECISION_SESSION_P" ColumnName="CODE_DECISION_SESSION_P" />
+          <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+          <ScalarProperty Name="OBSERVATION" ColumnName="OBSERVATION" />
+          <ScalarProperty Name="MOY_RATT" ColumnName="MOY_RATT" />
+          <ScalarProperty Name="CODE_CL2" ColumnName="CODE_CL2" />
+          <ScalarProperty Name="CODE_CL1" ColumnName="CODE_CL1" />
+          <ScalarProperty Name="DATE_INSC" ColumnName="DATE_INSC" />
+          <ScalarProperty Name="DATE_PREINSC" ColumnName="DATE_PREINSC" />
+          <ScalarProperty Name="DERN_UTILISATEUR" ColumnName="DERN_UTILISATEUR" />
+          <ScalarProperty Name="UTILISATEUR" ColumnName="UTILISATEUR" />
+          <ScalarProperty Name="CODE_CL_LANGUE" ColumnName="CODE_CL_LANGUE" />
+          <ScalarProperty Name="NIV_LANGUE" ColumnName="NIV_LANGUE" />
+          <ScalarProperty Name="SEMESTRE" ColumnName="SEMESTRE" />
+          <ScalarProperty Name="TYPE_INSC" ColumnName="TYPE_INSC" />
+          <ScalarProperty Name="NIVEAU_ACCEES" ColumnName="NIVEAU_ACCEES" />
+          <ScalarProperty Name="RESULTAT" ColumnName="RESULTAT" />
+          <ScalarProperty Name="MOY_GENERAL" ColumnName="MOY_GENERAL" />
+          <ScalarProperty Name="MOY_SEM2" ColumnName="MOY_SEM2" />
+          <ScalarProperty Name="MOY_SEM1" ColumnName="MOY_SEM1" />
+          <ScalarProperty Name="NB_CREDIT_MODULE" ColumnName="NB_CREDIT_MODULE" />
+          <ScalarProperty Name="CREDIT_RGLT" ColumnName="CREDIT_RGLT" />
+          <ScalarProperty Name="SIT_RGLT" ColumnName="SIT_RGLT" />
+          <ScalarProperty Name="COUT_DEV" ColumnName="COUT_DEV" />
+          <ScalarProperty Name="CODE_DEV" ColumnName="CODE_DEV" />
+          <ScalarProperty Name="MODE_RGLT" ColumnName="MODE_RGLT" />
+          <ScalarProperty Name="TYPE_RGLT" ColumnName="TYPE_RGLT" />
+          <ScalarProperty Name="FRAIS_INS" ColumnName="FRAIS_INS" />
+          <ScalarProperty Name="COUT_ANNUEL" ColumnName="COUT_ANNUEL" />
+          <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+          <ScalarProperty Name="CODE_CL" ColumnName="CODE_CL" />
+          <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+          <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

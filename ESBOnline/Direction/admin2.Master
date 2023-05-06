@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin2.master.cs" Inherits="ESPOnline.Direction.admin2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<style type="text/css">
+
+        
+
+#rolling-nav {
+  font:normal 12px 'Trebuchet MS',Trebuchet,Arial,Sans-Serif;
+  color:white;
+  text-transform:uppercase;
+	/* outline:1px solid; */
+	width:550px; /* Fixed width. Measure it manually */
+	margin:0px auto;
+}
+
+#rolling-nav ul {
+  height:50px;
+  margin:0px 0px;
+  padding:0px 0px;
+  overflow:hidden;
+}
+
+#rolling-nav li {
+  float:left;
+  display:inline;
+  list-style:none;
+  margin:0px 0px;
+  padding:0px 0px;
+}
+
+#rolling-nav a,
+#rolling-nav a:before {
+  display:block;
+  margin:0px 0px;
+  padding:0px 30px;
+  line-height:50px;
+  color:white;
+  text-decoration:none;
+  background-color:#900;
+  background-image:-webkit-linear-gradient(top, #900 0%, #6A0808 50%, #620303 50%, #6A0808 100%);
+  background-image:-moz-linear-gradient(top, #900 0%, #6A0808 50%, #620303 50%, #6A0808 100%);
+  background-image:-ms-linear-gradient(top, #900 0%, #6A0808 50%, #620303 50%, #6A0808 100%);
+  background-image:-o-linear-gradient(top, #900 0%, #6A0808 50%, #620303 50%, #6A0808 100%);
+  background-image:linear-gradient(top, #900 0%, #6A0808 50%, #620303 50%, #6A0808 100%);
+  -webkit-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+  -moz-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+  box-shadow:inset 0px 1px 0px rgba(255,255,255,0.1);
+  position:relative;
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -ms-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+
+#rolling-nav a:before {
+  content:attr(data-clone);
+  position:absolute;
+  top:100%;
+	right:0px;
+  left:0px;
+  display:block;
+  background-color:white;
+  background-image:-webkit-linear-gradient(top, #ddd, white);
+  background-image:-moz-linear-gradient(top, #ddd, white);
+  background-image:-ms-linear-gradient(top, #ddd, white);
+  background-image:-o-linear-gradient(top, #ddd, white);
+  background-image:linear-gradient(top, #ddd, white);
+  border-top:2px solid rgba(0,0,0,0.2);
+  color:#333;
+}
+
+#rolling-nav a:hover {
+  margin-top:-50px;
+  margin-bottom:1px;
+}
+ 
+
+    .style1
+    {
+        width: 100%;
+    }
+    .style2
+    {
+        width: 20px;
+      
+    }
+
+
+    .style3
+    {
+        height: 35px;
+    }
+
+
+    .style4
+    {
+        height: 35px;
+        width: 191px;
+    }
+    .style5
+    {
+        width: 220px;
+    }
+
+
+    </style>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1" 
+        style="background-color: #C0C0C0; border-style: inset; border-width: thick">
+        <tr>
+            <td class="style4">
+    <asp:Image ID="Image1" runat="server" Height="82px" ImageUrl="~/Contents/Img/logoESB_Blanc.png" Width="251px"  
+         />
+            </td>
+            <td class="style2" align="center">
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="#CC0000"
+        Height="35px" Style="text-align: center" Text="2016/2017" 
+        Width="724px"></asp:Label>
+            </td>
+            <td class="style5" align="center">
+                &nbsp;</td>
+            <td class="style3">
+    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn-link" OnClick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+  
+            </td>
+        </tr>
+    </table>
+ 
+		     
+	 
+ 
+    
+     
+
+   
+    <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <table class="style1" style="border: thick inset #666666">
+            <tr><td bgcolor="#D1D1D1"></td></tr>
+            </table>
+        </asp:ContentPlaceHolder>
+    </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,345 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="ESPOnline.Direction.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<style type="text/css">
+
+        #cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border: 0;
+  line-height: 1;
+  box-sizing: content-box;
+}
+#cssmenu {
+  height: 49px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #eee9f0));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  border-bottom: 2px solid #db000b;
+  width: auto;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu a {
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: linear-gradient(top, #fefefe 0%, #ececec 100%);
+  color: #000;
+  display: inline-block;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 49px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+#cssmenu ul {
+  list-style: none;
+}
+#cssmenu > ul {
+  float: left;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu > ul > li > a {
+  color: #000;
+  font-size: 12px;
+}
+#cssmenu > ul > li:hover:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #db000b;
+  margin-left: -10px;
+}
+#cssmenu > ul > li:first-child > a {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+#cssmenu > ul > li.active:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #db000b;
+  margin-left: -10px;
+}
+#cssmenu > ul > li.active > a {
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  background: #ececec;
+  background: -moz-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffeeff ef));
+  background: -webkit-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+}
+#cssmenu > ul > li:hover > a {
+  background: #ececec;
+  background: -moz-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffeeff ef));
+  background: -webkit-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+#cssmenu .has-sub {
+  z-index: 1;
+}
+#cssmenu .has-sub:hover > ul {
+  display: block;
+}
+#cssmenu .has-sub ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  left: 0;
+}
+#cssmenu .has-sub ul li {
+  *margin-bottom: -1px;
+}
+#cssmenu .has-sub ul li a {
+  background: #db000b;
+  border-bottom: 1px dotted #ff0f1b;
+  filter: none;
+  font-size: 11px;
+  display: block;
+  line-height: 120%;
+  padding: 10px;
+  color: #ffffff;
+}
+#cssmenu .has-sub ul li:hover a {
+  background: #a80008;
+}
+#cssmenu .has-sub .has-sub:hover > ul {
+  display: block;
+}
+#cssmenu .has-sub .has-sub ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#cssmenu .has-sub .has-sub ul li a {
+  background: #a80008;
+  border-bottom: 1px dotted #ff0f1b;
+}
+#cssmenu .has-sub .has-sub ul li a:hover {
+  background: #8f0007;
+}
+
+
+    </style>
+<body>
+    <form id="form1" runat="server">
+    <asp:Image ID="Image1" runat="server" Height="67px" ImageUrl="~/Contents/Img/logoESB_Blanc.png"
+        Width="146px" />
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="#CC0000"
+        Height="50px" Style="text-align: center" Text="AU: 2016/2017" Width="928px"></asp:Label>
+    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn-link" OnClick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+    <%-- <div class="text-left ">
+              
+              
+                  <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" OnClick="LinkButton1_Click"
+                     >Se déconnecter</asp:LinkButton>
+                      </div>
+                      </div>--%>
+    <br />
+    <br />
+    <br />
+    <div id='cssmenu'>
+        <ul>
+            <li class='has-sub'><a href='#'><span style='font-size: 15pt'>Flux d'admission</span></a>
+                <ul>
+                    <li class='last'><a href="RapportFluxEntree.aspx"><span>Flux d'entrée</span></a></li>
+                      <li class='last'><a href="recu.aspx"><span>RECU</span></a></li>
+                             <li class='last'><a href="Listeattente.aspx"><span>Liste attente</span></a></li>
+                               <li class='last'><a href="avecdecision.aspx"><span>Avec_codedecision</span></a></li>
+                     <li class='last'><a href="Consultaion_Admission.aspx"><span>Admission15_16</span></a></li>
+                       <li class='last'><a href="STATADD.aspx"><span>Suivi admission par date</span></a></li>
+                  <li class='last'><a href="stat.aspx"><span>Statistique</span></a></li>
+                   <li class='last'><a href="statistique3.aspx"><span>Statistique 3</span></a></li>
+                   <li class='last'><a href="statistique4.aspx"><span>Statistique 4</span></a></li>
+
+                    <li class='last'><a href="WebForm1.aspx"><span>Répartition par date/niv/spe</span></a></li>
+                      <li class='last'><a href="répartitiondescandidatsparscore.aspx">Répartition par score</a></li>
+                </ul>
+                 
+            </li>
+            <li class='has-sub'><a href='#'><span style='font-size: 15pt'>Inscrits</span></a>
+                <ul>
+                   <%-- <li class='last'><a href="RapportFlux2.aspx"><span>Effactif global par année</span></a></li>
+                    <li class='last'><a href="RapportFlux3.aspx"><span>Effectif par spécialité et niveau</span></a></li>--%>
+
+                    <li class='last'><a href="Statistique_2017.aspx"><span>Repartition des etudiants par classe</span></a></li>
+                     <li class='last'><a href="Stat_total.aspx"><span>Répartition détaillé par site et classe</span></a></li>
+                     <li class='last'><a href="Stat_etudiants.aspx"><span>Répartition détaillé par site et niveau</span></a></li>
+                     <li class='last'><a href="Stat_par_site.aspx"><span>Répartition des étudiants par site </span></a></li>
+                      <li class='last'><a href="Rep_etud_niv_pole.aspx"><span>Répartition des étudiants et classes par Niveau et Pôle </span></a></li>
+
+                        <li class='last'><a href="rep_nouv_inscrits.aspx"><span>Rep_nouv_inscrits </span></a></li>
+                </ul>
+            </li>
+
+            <li class='has-sub'><a href='#'><span style='font-size: 15pt'>Plan d'Etude</span></a>
+                <ul>
+                   <%-- <li class='last'><a href="RapportFlux2.aspx"><span>Effactif global par année</span></a></li>
+                    <li class='last'><a href="RapportFlux3.aspx"><span>Effectif par spécialité et niveau</span></a></li>--%>
+                     <li class='last'><a href="NB_affec_spec.aspx"><span> Nb ens saisis et Non saisis par spécialité </span></a></li>
+                     <li class='last'><a href="NB_affec_UP.aspx"><span> Nb ens saisis et Non saisis par UP</span></a></li>
+                      <li class='last'><a href="NB_ens_saisis.aspx"><span> Nb ens saisis et Non saisis par site</span></a></li>
+
+
+
+                </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span style='font-size: 15pt'>Résultat</span></a>
+                <ul>
+                    <li class='has-sub'><a href='#'><span>Résultat final (Rapports)</span></a>
+                        <ul>
+                            <li class='last'><a href="Resultatgen.aspx"><span>Résultat général</span></a></li>
+                            <li class='has-sub'><a href="Resultat Session Rat.aspx"><span>Resultats</span></a>
+                                <ul>
+                                    <li class='last'><a href="Specialite_R.aspx"><span>Résultat par spécialité</span></a></li>
+                                    <li class='last'><a href="Niveau_R.aspx"><span>Résultat par niveau</span></a></li>
+                                    <li class='last'><a href="Classe_R.aspx"><span>Résultat par classe</span></a></li>
+                                    <li class='last'><a href="Categorie_F.aspx" ><span>Résultat par catégorie</span></a></li>
+                                  
+
+
+                                    </ul>
+                            </li>
+                            <li class='last'><a href="Resultat_module_etudiant.aspx"><span>Résultat ->classe/Module
+                            </span></a></li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href="Resultat.aspx"><span>Session Principale (Recherche)</span></a></li>
+                    <li class='has-sub'><a href="ResultatRattrapage.aspx"><span>Session Rattrapage (Recherche)</span></a></li>
+                     
+
+  
+                   <%--  <li class='has-sub'><a href='#'><span>Analyse résultat</span></a>
+                <ul>
+                    <li class='last'><a href="RapportResultat.aspx"><span>Admis (etab origine)</span></a></li>
+                    <li class='last'><a href="RapportRedouble.aspx"><span>Redoublants (etab origine)</span></a></li></ul>
+               
+            </li>--%></ul>
+            </li>
+            <li class='has-sub'><a href='#'><span style='font-size: 15pt'> Etats langue
+            </span></a>
+                <ul>
+                 <li><a href="Etat_niveau_langue_2017.aspx"><span style='font-size: 15pt'> Etats niveaux langue</a></li>
+                     
+                      </ul>
+                      </li>
+           <%--  <li class='has-sub'><a href='#'><span>Tableau de bord</span></a>
+                <ul>
+                    <li class='has-sub'><a href='WebForm5.aspx'><span>Paramétrable</span></a></li>
+                    <li class='has-sub'><a href='Mensuel.aspx'><span>Mensuel</span></a></li>
+                    <li class='has-sub'><a href="#"><span>Spécialité</span></a>
+                        <ul>
+                            <li><a href='SpNiveau.aspx'><span>Spécialité Niveau</span></a></li>
+                            <li class='last'><a href="AbSpecialitegender.aspx"><span>Spécialité Sexe</span></a></li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href="Module.aspx"><span>Module</span></a>
+                        <ul>
+                            <li class='last'><a href="ABEnseigModule.aspx"><span>Module enseignant niveau</span></a></li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href="Enseignant.aspx"><span>Enseignant</span></a>
+                        <ul>
+                            <li class='last'><a href="ABEnseigModule.aspx"><span>Module enseignant niveau</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>--%>
+            <%-- --%>
+           <%-- <li class='has-sub'><a href='#'><span>Diplomation</span></a>
+                <ul>
+                </ul>
+            </li>--%>
+            <%--<li class='has-sub'><a href='#'><span>Test</span></a>
+                <ul>
+                    <li class='last'><a href="Specialite_P.aspx"><span>Rapport1</span></a></li>
+                    
+                    <li class='last'><a href="Specialite_T.aspx"><span>Rapport3</span></a></li>
+                     <li class='last'><a href="Niveau_P.aspx"><span>Rapport4</span></a></li>
+                     
+                       <li class='last'><a href="Niveau_T.aspx"><span>Rapport6</span></a></li>
+                       <li class='last'><a href="Classe_P.aspx"><span>Rapport7</span></a></li>
+                     
+                        <li class='last'><a href="Classe_T.aspx"><span>Rapport9</span></a></li>
+                    </ul>
+               
+            </li>--%>
+             <li class='has-sub'><a href='#'><span style='font-size: 15pt'>Absence</span></a>
+             <ul>
+             <li class='last'><a href="absenceetudiant.aspx"><span>Suivi des absences</span></a></li>
+                    <li class='last'><a href="Suivi_saisir-absence.aspx"><span>Détaille des absences par jour</span></a></li>
+                      <li class='last'><a href="etat_absence.aspx"><span>Saisie des absence par enseignant et séance
+                      </span></a></li>
+                </ul>
+                 
+                 
+
+            </ul>
+                    
+                    </li>
+        </ul>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Edt.master.cs" Inherits="ESPOnline.EmploiEsp.Edt" %>
+
+<!DOCTYPE>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+      <asp:ContentPlaceHolder ID="head" runat="server">
+          <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
+        <script src="../EDTCss/jsemploi/jquery.min.js" type="text/javascript"></script>
+        <script src="../EDTCss/jsemploi/skel.min.js" type="text/javascript"></script>
+        <script src="../EDTCss/jsemploi/skel-layers.min.js" type="text/javascript"></script>
+        <script src="../EDTCss/jsemploi/init.js" type="text/javascript"></script>
+       
+          <link href="../Contents/CSS3/css/bootstrap.css" rel="stylesheet" type="text/css" />
+          <link rel="stylesheet" href="../EDTCss/cssemploi/skel.css" />
+          <link rel="stylesheet" href="../EDTCss/cssemploi/style.css" />
+          <link rel="stylesheet" href="../EDTCss/cssemploi/style-desktop.css" />
+          <link href="../Contents/CSS3/css/bootstrap.css" rel="stylesheet" type="text/css" />
+          <link href="../Contents/jquery/css/blitzer/jquery-ui-1.10.3.custom.css" rel="stylesheet"
+        type="text/css" />
+          <link href="../Contents/jquery/css/blitzer/jquery-ui-1.10.3.custom.min.css" rel="stylesheet"
+        type="text/css" /><!--[if lte IE 9]>
+          <link rel="stylesheet" href="css/ie9.css" /><![endif]--><!--[if lte IE 8]><script src="js/html5shiv.js"></script>
+          <![endif]-->
+
+          <script src="../Contents/CSS3/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Contents/CSS3/js/bootstrap.js" type="text/javascript"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+     <script type="text/javascript">
+         $(document).ready(function () {
+             var url = window.location.pathname;
+             var substr = url.split('/');
+             var urlaspx = substr[substr.length - 1];
+             $('.nav').find('.active').removeClass('active');
+             $('.nav li a').each(function () {
+                 if (this.href.indexOf(urlaspx) >= 0) {
+                     $(this).parent().addClass('active');
+                 }
+             });
+         });
+    </script>
+    <!-- Header -->
+   <div id="header-wrapper">
+   
+                               
+        <header id="header" class="container">
+      <asp:Label CssClass="h4 text-info" ID="Label2" runat="server"></asp:Label>
+					 <div class="row">
+                   
+						<div class="12u">
+							<!-- Logo -->
+								<img class="img-responsive" alt="" src="../Contents/Img/logoESB_Blanc.png" />
+					
+								 <div class="row">
+                   
+						<div class="12u">
+                                  <!-- Nav -->
+								<!--ici accueil-->
+                                <ul class="nav nav-pills pull-right">
+                                       <li><a href="default.aspx">Se ConnecterSe Connecter</a>
+                                        <li class="active"><a href="Accueil.aspx">Accueil
+                                       </li>
+                        </div>
+                        </div>
+               <br /><br /> <br /><br />
+             
+  </div>
+    </div>
+    </div>
+    
+    
+
+    <div id="features-wrapper">
+
+    
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+     </asp:ContentPlaceHolder>
+    </div>
+    <!-- Copyright -->
+    <div id="copyright">
+        © 2016 School of Business 
+       
+</div>
+
+</form>
+    <script src="../Contents/CSS3/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Contents/CSS3/js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaimentEnLigne.Master.cs" Inherits="ESPOnline.Parents.PaimentEnLigne" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/menu-effects.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 243px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1" 
+        style="background-color: #C0C0C0; border-style: inset; border-width: thick">
+        <tr>
+            <td class="style4">
+    <asp:Image ID="Image1" runat="server" Height="67px" ImageUrl="~/Contents/Img/logoESB.png" Width="251px"  
+         />
+            </td>
+            <td class="auto-style1" align="center">
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="#CC0000"
+        Height="35px" Style="text-align: center" Text="2020/2021" 
+        Width="710px"></asp:Label>
+            </td>
+            <td class="auto-style2" align="center">
+                &nbsp;</td>
+            <td class="style3">
+   
+                <div class="text-right ">
+              <div class="form-group">
+              <asp:Label CssClass="h4 text-info" ID="Label2" runat="server"></asp:Label>
+              
+                  &nbsp;
+              
+                  <asp:Label ID="Label3" runat="server" Font-Bold="True" ForeColor="Red"   Text="" ></asp:Label>
+              </div>
+              <div class="form-group">
+                  <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" 
+                      onclick="LinkButton1_Click">Se déconnecter</asp:LinkButton>
+                      </div>
+              </div>
+            </td>
+        </tr>
+    </table>
+ 
+		    <table class="style1">
+         <tr>
+             <td>
+                <div id="main" role="main">
+                <ul id="menu3" class="menu">
+                    <li tabindex="0">Paiement En ligne 
+                        <ul class="submenu bounce">
+                            <li><a href="PaymentEsprit.aspx">Consulter</a></li>
+                          
+                             
+                        </ul>
+                    </li>
+                  
+                          
+                              
+                        
+                           
+                        </ul>
+                  
+              
+            </div></td>
+           
+         </tr>
+
+                
+             
+    </table>
+	 
+ 
+    
+     
+
+   
+    <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <table class="style1" style="border: thick inset #666666">
+            <tr><td bgcolor="#D1D1D1"></td></tr>
+            </table>
+        </asp:ContentPlaceHolder>
+    </center>
+    </form>
+</body>
+</html>
+

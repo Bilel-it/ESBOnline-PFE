@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  app:
+    image: esbonline
+    ports:
+      - 80:80
+    environment:
+      ORACLE_HOST: '192.168.0.100'
+      ORACLE_SID: 'orcl'
+      ORACLE_USER: 'SCOESB03'
+      ORACLE_PASSWORD: 'SCOESB03'
