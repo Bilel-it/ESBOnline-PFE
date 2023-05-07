@@ -12,7 +12,7 @@ pipeline {
             steps {
                 powershell 'Invoke-WebRequest https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1.1-64-bit.exe -OutFile git.exe'
                 powershell '.\\git.exe /SILENT /NORESTART /NOICONS /COMPONENTS="icons,ext\reg/shellhere,assoc,assoc_sh"'
-                powershell '[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Program Files\Git\bin", "Machine")'
+                powershell '[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:/Program Files\Git\bin", "Machine")'
             }
         } 
     
