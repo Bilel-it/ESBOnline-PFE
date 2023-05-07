@@ -11,7 +11,7 @@ pipeline {
 
         stage('Install Git') {
             steps {
-                powershell(script: 'install-git.ps1')
+                powershell(script: '.\install-git.ps1')
             }
         } 
     
