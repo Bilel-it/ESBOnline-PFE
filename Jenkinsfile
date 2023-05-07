@@ -1,6 +1,6 @@
 pipeline {    
     options { skipDefaultCheckout() }
-    agent {label 'windows'} 
+    agent {label 'docker-windows'} 
     
      
     
