@@ -21,7 +21,7 @@ pipeline {
                 checkout scm                
                 
 
-                echo "#################### Build  #################"
+                echo "#################### Build  ###########22222######"
                
                  
                   //  bat "powershell 'msbuild "ESBOnline\\ESBOnline.csproj" /p:Configuration=Debug /p:DeployOnBuild=true /p:PublishUrl="c:\\publish" /p:WebPublishMethod=FileSystem /p:DeployDefaultTarget=WebPublish'"
