@@ -9,11 +9,11 @@ pipeline {
     
     stages {   
 
-        stage('Install Git') {
-            steps {
-                powershell(script: '.\install-git.ps1')
-            }
-        } 
+       // stage('Install Git') {
+        //    steps {
+          //      powershell(script: '.\install-git.ps1')
+            //}
+        //} 
     
         stage('BUILD') {
             steps{
