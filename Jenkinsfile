@@ -63,10 +63,12 @@ pipeline {
 
          stage('upload publish') {
             steps {
+
+                script {
                                 
                 // Upload artifact to Nexus 
                 nexusArtifactUploader {
-                    nexusVersion: 'nexus3' // Specify Nexus version
+                    nexusVersion: NEXUS_VERSION // Specify Nexus version
                     protocol: NEXUS_PROTOCOL // or 'https' depending on your Nexus configuration
                     
                     nexusUrl: NEXUS_URL // Nexus server URL
@@ -89,6 +91,8 @@ pipeline {
             }
         }
     }
+
+    }
         
         
 
@@ -98,6 +102,8 @@ pipeline {
         
     }
         
+
+
 
 
 
