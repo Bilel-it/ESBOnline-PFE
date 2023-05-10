@@ -1,6 +1,20 @@
 pipeline {    
     options { skipDefaultCheckout() }
     agent {label 'docker-windows'} 
+
+    environment {
+        // This can be nexus3 or nexus2
+        NEXUS_VERSION = "nexus3"
+        // This can be http or https
+        NEXUS_PROTOCOL = "http"
+        // Where your Nexus is running. 'nexus-3' is defined in the docker-compose file
+        NEXUS_URL = "192.168.0.128:8081"
+        // Repository where we will upload the artifacttt
+        NEXUS_REPOSITORY = "esbonline"
+        // Jenkins credential id to authenticate to Nexus OS test3
+        NEXUS_CREDENTIAL_ID = "nexus-password"
+       
+    }
     
      
     
@@ -52,14 +66,14 @@ pipeline {
                                 
                 // Upload artifact to Nexus 
                 nexusArtifactUploader {
-                    nexusVersion: nexus3 // Specify Nexus version
-                    protocol: http // or 'https' depending on your Nexus configuration
+                    nexusVersion: NEXUS_VERSION // Specify Nexus version
+                    protocol: NEXUS_PROTOCOL // or 'https' depending on your Nexus configuration
                     
-                    nexusUrl: http://192.168.0.128:8081/ // Nexus server URL
+                    nexusUrl: NEXUS_URL // Nexus server URL
                     
-                    repository: esbonline // Repository in Nexus
+                    repository: NEXUS_REPOSITORY // Repository in Nexus
                     
-                    credentialsId: nexus-password // Credentials to authenticate with Nexus
+                    credentialsId: NEXUS_CREDENTIAL_ID // Credentials to authenticate with Nexus
                     
                     artifacts {
                         artifact {
