@@ -68,23 +68,23 @@ pipeline {
                                 
                 // Upload artifact to Nexus 
                 nexusArtifactUploader {
-                    nexusVersion: NEXUS_VERSION // Specify Nexus version
-                    protocol: NEXUS_PROTOCOL // or 'https' depending on your Nexus configuration
+                    nexusVersion: 'nexus3' // Specify Nexus version
+                    protocol: 'http' // or 'https' depending on your Nexus configuration
                     
-                    nexusUrl: NEXUS_URL // Nexus server URL
+                    nexusUrl: '192.168.0.128:8081' // Nexus server URL
                     
-                    repository: NEXUS_REPOSITORY // Repository in Nexus
+                    repository: 'esbonline' // Repository in Nexus
                     
-                    credentialsId: NEXUS_CREDENTIAL_ID // Credentials to authenticate with Nexus
+                    credentialsId: 'nexus-password' // Credentials to authenticate with Nexus
                     
                     artifacts {
                         artifact {
-                            artifactId('your-artifact-id') // Unique identifier for your artifact
-                            groupId('your-group-id') // Group or organization ID
-                            version('your-version') // Version of the artifact
-                            classifier('') // Optional classifier
+                            artifactId: 'esbesbonline' // Unique identifier for your artifact
+                            //groupId('your-group-id') // Group or organization ID
+                            //version('your-version') // Version of the artifact
+                            //classifier('') // Optional classifier
                             type('zip') // Type of the artifact
-                            fileLocation('publish/*.zip') // Path to the artifact file(s) to upload
+                            fileLocation('*.zip') // Path to the artifact file(s) to upload
                         }
                     }
                 }
