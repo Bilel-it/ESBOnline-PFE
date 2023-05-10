@@ -86,7 +86,7 @@ pipeline {
                           //  type('zip') // Type of the artifact
                             //fileLocation('*.zip') // Path to the artifact file(s) to upload
                     artifacts: [
-                    [artifactId: esbonline,
+                    [artifactId: 'esbonline',
                     classifier: '',
                     file: 'publish.zip',
                     type: 'zip']
