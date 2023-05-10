@@ -66,7 +66,7 @@ pipeline {
                                 
                 // Upload artifact to Nexus 
                 nexusArtifactUploader {
-                    nexusVersion: NEXUS_VERSION // Specify Nexus version
+                    nexusVersion: 'nexus3' // Specify Nexus version
                     protocol: NEXUS_PROTOCOL // or 'https' depending on your Nexus configuration
                     
                     nexusUrl: NEXUS_URL // Nexus server URL
