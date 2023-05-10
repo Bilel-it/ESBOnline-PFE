@@ -56,7 +56,7 @@ pipeline {
          stage('Compress') {
             steps {
                 bat '''
-                    powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip'" 
+                    powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip' -Force" 
                 '''
             }
          }
