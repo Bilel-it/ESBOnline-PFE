@@ -50,16 +50,16 @@ pipeline {
          stage('upload publish') {
             steps {
                                 
-                // Upload artifact to Nexus
+                // Upload artifact to Nexus 
                 nexusArtifactUploader {
-                    nexusVersion('nexus3') // Specify Nexus version
-                    protocol('http') // or 'https' depending on your Nexus configuration
+                    nexusVersion: "nexus3" // Specify Nexus version
+                    protocol: "http" // or 'https' depending on your Nexus configuration
                     
-                    nexusUrl('http://192.168.0.128:8081/') // Nexus server URL
+                    nexusUrl: "http://192.168.0.128:8081/" // Nexus server URL
                     
-                    repository('esbonline') // Repository in Nexus
+                    repository: "esbonline" // Repository in Nexus
                     
-                    credentialsId('nexus-password') // Credentials to authenticate with Nexus
+                    credentialsId: "nexus-password" // Credentials to authenticate with Nexus
                     
                     artifacts {
                         artifact {
