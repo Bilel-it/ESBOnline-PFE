@@ -53,13 +53,13 @@ pipeline {
             }
         }
 
-         stage('Compress') {
-            steps {
-                bat '''
-                    powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip' -Force" 
-                '''
-            }
-         }
+         //stage('Compress') {
+           // steps {
+             //   bat '''
+        //            powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip' -Force" 
+        //        '''
+        //    }
+        // }
 
          stage('upload publish') {
             steps {
@@ -67,7 +67,7 @@ pipeline {
                 script {
                                 
                 // Upload artifact to Nexus 
-                nexusArtifactUploader {
+                nexusArtifactUploader (
                     nexusVersion: 'nexus3' // Specify Nexus version
                     protocol: 'http' // or 'https' depending on your Nexus configuration
                     
@@ -77,17 +77,25 @@ pipeline {
                     
                     credentialsId: 'nexus-password' // Credentials to authenticate with Nexus
                     
-                    artifacts {
-                        artifact {
-                            artifactId: 'esbesbonline' // Unique identifier for your artifact
+                    //artifacts {
+                      //  artifact {
+                        //    artifactId: 'esbesbonline' // Unique identifier for your artifact
                             //groupId('your-group-id') // Group or organization ID
                             //version('your-version') // Version of the artifact
                             //classifier('') // Optional classifier
-                            type('zip') // Type of the artifact
-                            fileLocation('*.zip') // Path to the artifact file(s) to upload
+                          //  type('zip') // Type of the artifact
+                            //fileLocation('*.zip') // Path to the artifact file(s) to upload
+                    artifacts: [
+                    [artifactId: esbonline,
+                    classifier: '',
+                    file: 'publish.zip',
+                    type: 'zip']
+                    ]
+
+                        );
                         }
                     }
-                }
+                
             }
         }
     }
