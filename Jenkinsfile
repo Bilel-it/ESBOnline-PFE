@@ -128,7 +128,7 @@ pipeline {
 
         }
     }
-}
+
 
          stage('docker build') {
           agent {
