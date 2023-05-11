@@ -107,7 +107,7 @@ pipeline {
 
 
 
-          exusArtifactDownloader (
+          nexusArtifactDownloader (
                     nexusVersion: NEXUS_VERSION, // Specify Nexus version
                     protocol: NEXUS_PROTOCOL, // or 'https' depending on your Nexus configuration
                     
