@@ -98,6 +98,20 @@ pipeline {
                 label 'windows'
             }
 
+
+
+stage('docker build') {
+          agent {
+                label 'windows'
+            }
+            steps {
+                bat '''
+                    powershell -Command "ipconfig" 
+                '''
+            }
+         } 
+
+
     steps {
         script {
 
