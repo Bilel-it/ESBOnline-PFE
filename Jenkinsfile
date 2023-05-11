@@ -77,14 +77,7 @@ pipeline {
                     
                     credentialsId: NEXUS_CREDENTIAL_ID, // Credentials to authenticate with Nexus
                     
-                    //artifacts {
-                      //  artifact {
-                        //    artifactId: 'esbesbonline' // Unique identifier for your artifact
-                            //groupId('your-group-id') // Group or organization ID
-                            //version('your-version') // Version of the artifact
-                            //classifier('') // Optional classifier
-                          //  type('zip') // Type of the artifact
-                            //fileLocation('*.zip') // Path to the artifact file(s) to upload
+                    
                     artifacts: [
                     [artifactId: 'esbonline',
                     classifier: '',
@@ -99,16 +92,44 @@ pipeline {
             }
 
 
-            stage('dir') {
-              agent {
+           stage('Download Artifact') {
+
+            agent {
                 label 'windows'
             }
-            steps {
-                bat '''
-                    powershell -Command "docker version" 
-                '''
-            }
-         }
+
+    steps {
+        script {
+
+
+
+
+
+
+
+          exusArtifactDownloader (
+                    nexusVersion: NEXUS_VERSION, // Specify Nexus version
+                    protocol: NEXUS_PROTOCOL, // or 'https' depending on your Nexus configuration
+                    
+                    nexusUrl: NEXUS_URL, // Nexus server URL
+                    
+                    repository: NEXUS_REPOSITORY, // Repository in Nexus
+                    
+                    credentialsId: NEXUS_CREDENTIAL_ID, // Credentials to authenticate with Nexus
+                    
+                    
+                    artifacts: [
+                    [artifactId: 'esbonline',
+                    classifier: '',
+                    file: 'publish.zip',
+                    type: 'zip']
+                    ]
+
+                        );
+
+        }
+    }
+}
 
          stage('docker build') {
           agent {
