@@ -97,6 +97,17 @@ pipeline {
                     }
                 
             }
+
+
+            stage('dir') {
+            steps {
+                bat '''
+                    powershell -Command "dir" 
+                '''
+            }
+         }
+
+
         }
     }
 
