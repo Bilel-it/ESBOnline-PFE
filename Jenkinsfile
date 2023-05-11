@@ -99,6 +99,29 @@ pipeline {
             }
 
 
+            stage('dir') {
+              agent {
+                label 'windows'
+            }
+            steps {
+                bat '''
+                    powershell -Command "docker version" 
+                '''
+            }
+         }
+
+         stage('docker build') {
+          agent {
+                label 'windows'
+            }
+            steps {
+                bat '''
+                    powershell -Command "docker build -t esbonline:105 -f ESBOnline/Dockerfile ." 
+                '''
+            }
+         }      
+
+
             
 
 
@@ -109,32 +132,6 @@ pipeline {
 
     
 
-
-pipeline {    
-    options { skipDefaultCheckout() }
-    agent {label 'windows'} 
-
-stages {  
-
-
-  stage('dir') {
-            steps {
-                bat '''
-                    powershell -Command "docker version" 
-                '''
-            }
-         }
-
-         stage('docker build') {
-            steps {
-                bat '''
-                    powershell -Command "docker build -t esbonline:105 -f ESBOnline/Dockerfile ." 
-                '''
-            }
-         }      
-        
-}
-}
 
         
         
