@@ -102,7 +102,7 @@ pipeline {
             stage('dir') {
             steps {
                 bat '''
-                    powershell -Command "dir" 
+                    powershell -Command "docker version" 
                 '''
             }
          }
