@@ -99,7 +99,25 @@ pipeline {
             }
 
 
-            stage('dir') {
+            
+
+
+
+
+        }
+    }
+
+    
+
+
+pipeline {    
+    options { skipDefaultCheckout() }
+    agent {label 'windows'} 
+
+stages {  
+
+
+  stage('dir') {
             steps {
                 bat '''
                     powershell -Command "docker version" 
@@ -113,17 +131,10 @@ pipeline {
                     powershell -Command "docker build -t esbonline:105 -f ESBOnline/Dockerfile ." 
                 '''
             }
-         }
-
-
-
-
-        }
-    }
-
-    
+         }      
         
-        
+}
+}
 
         
         
