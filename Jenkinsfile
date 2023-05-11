@@ -98,48 +98,33 @@ pipeline {
                 label 'windows'
             }
 
-
-
-stage('docker build') {
-          agent {
-                label 'windows'
-            }
-            steps {
-                bat '''
-                    powershell -Command "ipconfig" 
-                '''
-            }
-         } 
-
-
     steps {
-        script {
+       // script {
 
-
-
-
-
-
-
-          nexusArtifactDownloader (
-                    nexusVersion: NEXUS_VERSION, // Specify Nexus version
-                    protocol: NEXUS_PROTOCOL, // or 'https' depending on your Nexus configuration
+         // exusArtifactDownloader (
+           //         nexusVersion: NEXUS_VERSION, // Specify Nexus version
+             //       protocol: NEXUS_PROTOCOL, // or 'https' depending on your Nexus configuration
                     
-                    nexusUrl: NEXUS_URL, // Nexus server URL
+               //     nexusUrl: NEXUS_URL, // Nexus server URL
                     
-                    repository: NEXUS_REPOSITORY, // Repository in Nexus
+                 //   repository: NEXUS_REPOSITORY, // Repository in Nexus
                     
-                    credentialsId: NEXUS_CREDENTIAL_ID, // Credentials to authenticate with Nexus
+                   // credentialsId: NEXUS_CREDENTIAL_ID, // Credentials to authenticate with Nexus
                     
                     
-                    artifacts: [
-                    [artifactId: 'esbonline',
-                    classifier: '',
-                    file: 'publish.zip',
-                    type: 'zip']
-                    ]
+                  //  artifacts: [
+                  //  [artifactId: 'esbonline',
+                  //  classifier: '',
+                   // file: 'publish.zip',
+                  //  type: 'zip']
+                  //  ]
 
-                        );
+                    //    );
+
+
+                bat '''
+                    powershell -Command "curl -O http://192.168.0.128:8081/repository/esbonline/esbonline/esbonline-.zip" 
+                '''
 
         }
     }
