@@ -74,9 +74,14 @@ pipeline {
 
          stage('Compress') {
           steps {
-               bat '''
-                   powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish-${commitId}.zip' -Force" 
+               //bat '''
+               //    powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish-${commitId}.zip' -Force" 
+                //'''
+
+                bat '''
+                         powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath "C:/jenkins/workspace/esbonline/publish-${commitId}.zip" -Force"
                 '''
+
             }
          }
 
