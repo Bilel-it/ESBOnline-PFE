@@ -31,7 +31,13 @@ pipeline {
     
         stage('BUILD') {
             steps{
-                checkout scm                
+                checkout scm   
+
+                GIT_COMMIT_HASH = sh "(git log -n 1 --pretty=format:'%H')"
+
+                echo "**************************************************"
+                echo "${GIT_COMMIT_HASH}"
+                echo "**************************************************"             
                 
 
                 echo "#################### Build  ###########22222######"
