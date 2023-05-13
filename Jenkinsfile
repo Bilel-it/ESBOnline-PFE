@@ -34,12 +34,11 @@ pipeline {
         stage('Obtenir le commit ID') {
             steps {
                 script {
-                    def commitId = bat(script: 'git log -n 1 --pretty=format:"%H"', returnStdout: true).trim()
-                    echo "Commit ID : ${commitId}"
-                    
-                    // Utilisez la variable commitId comme nécessaire dans les étapes suivantes
-                    // Par exemple, checkout d'une version spécifique
-                    bat "git checkout ${commitId}"
+                    GIT_COMMIT_HASH = bat "(git log -n 1 --pretty=format:'%H')"
+
+                echo "**************************************************"
+                echo "${GIT_COMMIT_HASH}"
+                echo "**************************************************"
                 }
             }
         }
