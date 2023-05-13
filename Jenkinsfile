@@ -137,17 +137,37 @@ pipeline {
             }
          } 
 
-        // stage('TAG Image Backend') {
+         //stage('TAG Image Backend') {
           //  steps{
 
             //    echo "#################### Tag Image Backend #################"
-              //  bat '''
-                //    powershell -Command "docker build -t esbonline:dev -f ESBOnline/Dockerfile ." 
+             //   bat '''
+               //     powershell -Command "docker build -t esbonline:dev -f ESBOnline/Dockerfile ." 
 
-                  //  docker tag esbonline:dev imagedockerpaas.azurecr.io/backend:${tag}
-                //'''
-            //}
-        //}     
+//                    docker tag esbonline:dev imagedockerpaas.azurecr.io/backend:${tag}
+  //              '''
+    //        }
+      //  }
+
+
+
+      stage("Push image"){
+            steps {
+                 script{
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'nexuslogin',
+                    usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                        env.REG_USERNAME = USERNAME
+                        env.REG_PASSWORD = PASSWORD
+                    }
+
+               bat ''' 
+               docker login --username=${REG_USERNAME} --password=${REG_PASSWORD}
+                docker push repository-DockerImage/esbonline:01 
+                '''
+
+            }
+            }
+        }     
 
 
            
