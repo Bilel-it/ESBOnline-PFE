@@ -114,7 +114,7 @@ pipeline {
                     
                     
                     artifacts: [
-                    [artifactId: "esbonline-${commitId}dev",
+                    [artifactId: "esbonline-${commitId}-dev",
                     classifier: '',
                     file: "publish-${commitId}.zip",                    
                     type: 'zip']
@@ -132,10 +132,22 @@ pipeline {
           
             steps {
                 bat '''
-                    powershell -Command "docker build -t esbonline:105 -f ESBOnline/Dockerfile ." 
+                    powershell -Command "docker build -t esbonline:dev -f ESBOnline/Dockerfile ." 
                 '''
             }
-         }      
+         } 
+
+        // stage('TAG Image Backend') {
+          //  steps{
+
+            //    echo "#################### Tag Image Backend #################"
+              //  bat '''
+                //    powershell -Command "docker build -t esbonline:dev -f ESBOnline/Dockerfile ." 
+
+                  //  docker tag esbonline:dev imagedockerpaas.azurecr.io/backend:${tag}
+                //'''
+            //}
+        //}     
 
 
            
