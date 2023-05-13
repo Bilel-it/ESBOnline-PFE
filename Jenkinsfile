@@ -79,7 +79,7 @@ pipeline {
                 //'''
 
 
-            def publishFilePath = "C:/jenkins/workspace/esbonline/publish-" + commitId + ".zip"
+            publishFilePath = "C:/jenkins/workspace/esbonline/publish-" + commitId + ".zip"
             bat """
                 powershell -Command \"Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath '$publishFilePath' -Force\"
             """
