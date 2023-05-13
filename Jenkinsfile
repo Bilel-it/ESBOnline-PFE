@@ -13,6 +13,8 @@ pipeline {
         NEXUS_REPOSITORY = 'esbonline'
         // Jenkins credential id to authenticate to Nexus OS test3
         NEXUS_CREDENTIAL_ID = 'nexus-password'
+
+        tag = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%H'").trim()
        
     }
     
@@ -32,13 +34,9 @@ pipeline {
         stage('BUILD') {
             steps{
                 checkout scm   
-
-                GIT_COMMIT_HASH = sh "(git log -n 1 --pretty=format:'%H')"
-
-                echo "**************************************************"
-                echo "${GIT_COMMIT_HASH}"
-                echo "**************************************************"             
                 
+                 echo "#################### TAG  ###########22222######"            
+                echo ${tag}
 
                 echo "#################### Build  ###########22222######"
                
