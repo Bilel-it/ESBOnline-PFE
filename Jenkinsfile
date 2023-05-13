@@ -36,7 +36,7 @@ pipeline {
                 checkout scm   
                 
                  echo "#################### TAG  ###########22222######"            
-                echo ${tag}
+                echo "${tag}"
 
                 echo "#################### Build  ###########22222######"
                
