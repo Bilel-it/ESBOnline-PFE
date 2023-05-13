@@ -100,7 +100,7 @@ pipeline {
                     artifacts: [
                     [artifactId: 'esbonline',
                     classifier: '',
-                    file: 'publish'${commitId}'.zip',
+                    file: "publish${commitId}.zip",                    
                     type: 'zip']
                     ]
 
