@@ -36,7 +36,7 @@ pipeline {
                 script {
 
                   GIT_COMMIT_HASH = bat '''
-                    powershell -Command "git log -n 1 --pretty=format:'%H'" 
+                    cmd -Command "git log -n 1 --pretty=format:'%H'" 
                 '''
 
 
