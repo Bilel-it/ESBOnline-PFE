@@ -92,6 +92,17 @@ pipeline {
             }
 
 
+
+            stage('docker build') {
+          
+            steps {
+                bat '''
+                    powershell -Command "docker build -t esbonline:105 -f ESBOnline/Dockerfile ." 
+                '''
+            }
+         }      
+
+
            
 
 
