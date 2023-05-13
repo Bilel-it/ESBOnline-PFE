@@ -114,7 +114,7 @@ pipeline {
                     
                     
                     artifacts: [
-                    [artifactId: 'esbonline',
+                    [artifactId: 'esbonline-'${commitId},
                     classifier: '',
                     file: "publish-${commitId}.zip",                    
                     type: 'zip']
