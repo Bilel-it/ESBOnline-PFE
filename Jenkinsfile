@@ -1,6 +1,6 @@
 pipeline {    
     options { skipDefaultCheckout() }
-    agent {label 'docker-windows'} 
+    agent {label 'windows'} 
 
     environment {
         // This can be nexus3 or nexus2
