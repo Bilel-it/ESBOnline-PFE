@@ -15,7 +15,7 @@ pipeline {
         NEXUS_CREDENTIAL_ID = 'nexus-password'
 
         commitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
-        commitIdLastFour = commitId.substring(commitId.length() - 4)
+        commitIdLastFour = commitId.substring(commitId.length() - 6)
         
     }
     
@@ -46,6 +46,7 @@ pipeline {
 
 
                 echo "#################### TAG  ###########22222######"
+                echo "AllCommit ID: ${commitId}" 
                  echo "Commit ID: ${commitIdLastFour}" 
                 
                  //echo "Commit ID: ${env.COMMIT_ID}"     
