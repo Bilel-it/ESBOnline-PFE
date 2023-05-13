@@ -45,7 +45,8 @@ pipeline {
 
 
                 echo "#################### TAG  ###########22222######"
-                 echo "Commit ID: ${commitId}"      
+                 //echo "Commit ID: ${commitId}" 
+                 echo "Commit ID: ${env.COMMIT_ID}"     
                  echo "#################### TAG  ###########22222######"
                 
 
