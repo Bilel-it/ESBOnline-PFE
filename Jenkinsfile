@@ -31,24 +31,7 @@ pipeline {
         //} 
 
 
-        stage('Obtenir le commit ID') {
-            steps {
-                script {
-
-                  GIT_COMMIT_HASH = bat '''
-                    cmd -Command "git log -n 1 --pretty=format:'%H'" 
-                '''
-
-
-                  //  GIT_COMMIT_HASH = bat "git log -n 1 --pretty=format:'%H'"
-
-                echo "**************************************************"
-                echo "${GIT_COMMIT_HASH}"
-                echo "**************************************************"
-                }
-            }
-        }
-
+        
         
 
 
@@ -58,7 +41,11 @@ pipeline {
             steps{
                 checkout scm   
                 
-                 echo "#################### TAG  ###########22222######"            
+
+
+                echo "#################### TAG  ###########22222######"
+                 def commitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
+        echo "Commit ID: ${commitId}"       
                 
 
                 echo "#################### Build  ###########22222######"
