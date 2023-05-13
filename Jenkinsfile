@@ -16,7 +16,7 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6)
-        publishfile = concat("publish",commitId)
+        
         
     }
     
@@ -48,7 +48,7 @@ pipeline {
 
                 echo "#################### TAG  ###########22222######"
                 echo "AllCommit ID: ${commitId}" 
-                echo "AllCommit ID: ${publishfile}" 
+              
                  
                 
                  //echo "Commit ID: ${env.COMMIT_ID}"     
@@ -81,13 +81,17 @@ pipeline {
                 //'''
 
 
-           
+           bat """
+                powershell -Command \"Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath "C:/jenkins/workspace/esbonline/publish-'${commitId}'.zip -Force\"
+            """
 
 
-                bat '''
-                        powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath "C:/jenkins/workspace/esbonline/publish-${commitId}.zip" -Force"
+              //  bat '''
+                //        powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath "C:/jenkins/workspace/esbonline/publish-${commitId}.zip" -Force"
+
+                        
                          
-               '''
+               //'''
 
             }
          }
