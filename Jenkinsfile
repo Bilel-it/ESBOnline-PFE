@@ -34,7 +34,13 @@ pipeline {
         stage('Obtenir le commit ID') {
             steps {
                 script {
-                    GIT_COMMIT_HASH = bat "git log -n 1 --pretty=format:'%H'"
+
+                  GIT_COMMIT_HASH = bat '''
+                    powershell -Command "git log -n 1 --pretty=format:'%H'" 
+                '''
+
+
+                  //  GIT_COMMIT_HASH = bat "git log -n 1 --pretty=format:'%H'"
 
                 echo "**************************************************"
                 echo "${GIT_COMMIT_HASH}"
