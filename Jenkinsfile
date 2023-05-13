@@ -14,8 +14,7 @@ pipeline {
         // Jenkins credential id to authenticate to Nexus OS test3
         NEXUS_CREDENTIAL_ID = 'nexus-password'
 
-        tag = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%H'").trim()
-       
+        
     }
     
      
@@ -30,13 +29,27 @@ pipeline {
           //      powershell(script: '.\install-git.ps1')
             //}
         //} 
+
+
+        stage('Obtenir le commit ID') {
+            steps {
+                bat(script: 'git log -n 1 --pretty=format:"%H"', returnStdout: true) { output ->
+                    def commitId = output.trim()
+                    echo "Commit ID : ${commitId}"
+                    
+                    // Utilisez la variable commitId comme nécessaire dans les étapes suivantes
+                    // Par exemple, checkout d'une version spécifique
+                    bat "git checkout ${commitId}"
+                }
+            }
+        }
     
         stage('BUILD') {
             steps{
                 checkout scm   
                 
                  echo "#################### TAG  ###########22222######"            
-                echo "${tag}"
+                
 
                 echo "#################### Build  ###########22222######"
                
@@ -119,6 +132,9 @@ pipeline {
 
         }
 }
+
+
+
 
     
 
