@@ -72,13 +72,13 @@ pipeline {
             }
         }
 
-         stage('Compress') {
-          steps {
-                bat '''
-                    powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip' -Force" 
-                '''
-            }
-         }
+        // stage('Compress') {
+         // steps {
+          //      bat '''
+            //        powershell -Command "Compress-Archive -Path 'C:/jenkins/workspace/esbonline' -DestinationPath 'C:/jenkins/workspace/esbonline/publish.zip' -Force" 
+             //   '''
+           // }
+         //}
 
          stage('upload publish') {
             steps {
@@ -100,7 +100,7 @@ pipeline {
                     artifacts: [
                     [artifactId: 'esbonline',
                     classifier: '',
-                    file: 'publish.zip',
+                    file: 'publish'${commitId}'.zip',
                     type: 'zip']
                     ]
 
