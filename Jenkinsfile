@@ -16,7 +16,7 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6)
-        publishFile = "publish-\"${commitId}
+        publishFile = concat("publish",commitId)
         
     }
     
