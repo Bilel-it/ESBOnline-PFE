@@ -14,7 +14,7 @@ pipeline {
         // Jenkins credential id to authenticate to Nexus OS test3
         NEXUS_CREDENTIAL_ID = 'nexus-password'
 
-        commitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim().take(4)
+        commitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         
         
     }
@@ -47,6 +47,7 @@ pipeline {
 
                 echo "#################### TAG  ###########22222######"
                  //echo "Commit ID: ${commitId}" 
+                
                  echo "Commit ID: ${env.COMMIT_ID}"     
                  echo "#################### TAG  ###########22222######"
                 
