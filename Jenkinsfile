@@ -15,6 +15,7 @@ pipeline {
         NEXUS_CREDENTIAL_ID = 'nexus-password'
 
         commitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
+        commitId = commitId.take(4)
         
     }
     
