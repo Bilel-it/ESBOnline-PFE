@@ -52,13 +52,10 @@ pipeline {
     
 bat """ 
 
-    SonarScanner.MSBuild.exe begin /k:"esb" /d:sonar.host.url="http://192.168.0.128:9000" /d:sonar.token="sqp_3788c540e26c96eb22ceff60274ede019ef6a51f"
-
-
+   
+SonarScanner.MSBuild.exe begin /k:"esbonline" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="624f95b62804b5cd3d99b8fcffe1e7c6fa6ba85b"
 MsBuild.exe /t:Rebuild "C:/jenkins/workspace/esbonline/ESBOnline/ESBOnline.csproj"
-
-
-SonarScanner.MSBuild.exe end /d:sonar.token="sqp_3788c540e26c96eb22ceff60274ede019ef6a51f"
+SonarScanner.MSBuild.exe end /d:sonar.login="624f95b62804b5cd3d99b8fcffe1e7c6fa6ba85b"
 
 """ 
 
