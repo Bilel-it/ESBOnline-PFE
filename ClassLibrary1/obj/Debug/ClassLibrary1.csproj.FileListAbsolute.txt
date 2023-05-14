@@ -20,3 +20,14 @@ C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\ClassLibrary1\o
 C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
 C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Administrator\Downloads\ESB-Online-main\ESB-Online-main\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

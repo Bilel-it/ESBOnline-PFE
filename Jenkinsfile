@@ -16,8 +16,8 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6)
-        msbuildHome = tool 'Default MSBuild'
-        scannerHome = tool 'SonarScanner for MSBuild'
+       // msbuildHome = tool 'Default MSBuild'
+       // scannerHome = tool 'SonarScanner for MSBuild'
         
     }
     
@@ -45,10 +45,23 @@ pipeline {
         stage('SonarQube Analysis') {
           steps{
     
-    withSonarQubeEnv() {
-      bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"esbonline\""
-      bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
-      bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
+    //withSonarQubeEnv() {
+    //  bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"esbonline\""
+    //  bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
+    //  bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
+    
+bat """ 
+
+    SonarScanner.MSBuild.exe begin /k:"esb" /d:sonar.host.url="http://192.168.0.128:9000" /d:sonar.token="sqp_3788c540e26c96eb22ceff60274ede019ef6a51f"
+
+
+MsBuild.exe /t:Rebuild "C:\jenkins\workspace\esbonline\ESBOnline\ESBOnline.csproj"
+
+
+SonarScanner.MSBuild.exe end /d:sonar.token="sqp_3788c540e26c96eb22ceff60274ede019ef6a51f"
+
+""" 
+
     }
     }
   }

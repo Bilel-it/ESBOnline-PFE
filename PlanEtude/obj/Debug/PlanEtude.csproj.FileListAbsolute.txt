@@ -46,3 +46,15 @@ C:\Users\Administrator\Desktop\esb-online\PlanEtude\obj\Debug\PlanEtude.csproj.C
 C:\Users\Administrator\Desktop\esb-online\PlanEtude\obj\Debug\PlanEtude.csproj.CopyComplete
 C:\Users\Administrator\Desktop\esb-online\PlanEtude\obj\Debug\PlanEtude.dll
 C:\Users\Administrator\Desktop\esb-online\PlanEtude\obj\Debug\PlanEtude.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\PlanEtude.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\PlanEtude.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\Encadrement.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\Encadrement.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\bin\Debug\DAL.dll.config
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\obj\Debug\PlanEtude.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\obj\Debug\PlanEtude.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\obj\Debug\PlanEtude.csproj.CopyComplete
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\obj\Debug\PlanEtude.dll
+C:\Users\Administrator\Desktop\git\ESBOnline-PFE\PlanEtude\obj\Debug\PlanEtude.pdb
