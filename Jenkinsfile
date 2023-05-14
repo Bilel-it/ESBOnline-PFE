@@ -16,7 +16,8 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6)
-        
+        msbuildHome = tool 'Default MSBuild'
+        scannerHome = tool 'SonarScanner for MSBuild'
         
     }
     
@@ -43,8 +44,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
           steps{
-    msbuildHome = tool 'Default MSBuild'
-    scannerHome = tool 'SonarScanner for MSBuild'
+    
     withSonarQubeEnv() {
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"esbonline\""
       bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
