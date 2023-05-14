@@ -131,9 +131,9 @@ pipeline {
             stage('docker build') {
           
             steps {
-                bat '''
-                    powershell -Command "docker build -t esbonline:dev -f ESBOnline/Dockerfile ." 
-                '''
+                bat """
+                    powershell -Command "docker build -t esbonline:${commitId} -f ESBOnline/Dockerfile ." 
+                """
             }
          } 
 
