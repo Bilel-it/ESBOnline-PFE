@@ -160,10 +160,20 @@ pipeline {
                         env.REG_PASSWORD = PASSWORD
                     }
 
-               bat ''' 
-               docker login --username=${REG_USERNAME} --password=${REG_PASSWORD}
-                docker push repository-DockerImage/esbonline:01 
-                '''
+               bat """ 
+
+               
+               docker login --username=${REG_USERNAME} --password=${REG_PASSWORD} http://192.168.0.128:5567
+               docker tag esbonline:01 192.168.0.128:5567/esbonline/esbonline:${commitId}
+               docker push 192.168.0.128:5567/esbonline/esbonline:${commitId}
+
+                
+                """
+
+
+//docker tag esbonline:01 192.168.0.128:5567/esbonline/esbonline:01
+//docker push 192.168.0.128:5567/esbonline/esbonline:01
+
 
             }
             }
