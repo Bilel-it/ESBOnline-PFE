@@ -64,7 +64,7 @@ SonarScanner.MSBuild.exe end /d:sonar.token="sqp_3788c540e26c96eb22ceff60274ede0
 
     }
     }
-  }
+  
         
 
 
