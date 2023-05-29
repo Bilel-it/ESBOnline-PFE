@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: esbonline-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: samba-storage
+  csi:
+    driver: smb.csi.k8s.io
+    readOnly: false
+    volumeHandle: esbonline-pv
+    volumeAttributes:
+      source: //192.168.0.129/esbonline-data
+      username: usersmb
+      password: Esprit2023
+      

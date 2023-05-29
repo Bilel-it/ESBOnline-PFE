@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: esbonline-ingress
+  namespace: esbonline2
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - host:
+    http:
+      paths:
+      - backend:
+          service:
+            name: esbonline
+            port:
+              number: 80
+        path: /esbonline/?(.*)
+        pathType: Prefix
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.0.126
