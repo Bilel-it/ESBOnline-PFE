@@ -44,7 +44,7 @@ pipeline {
 
                 echo "#################### Trigger Manifest UPDATE #################"+$TAGImage
                 
-                build job: 'updatejenkinsfileprod', parameters: [string(name: 'DOCKERTAG', value: env.tag)]
+               // build job: 'updatejenkinsfileprod', parameters: [string(name: 'DOCKERTAG', value: env.tag)]
                          
                 
                 
