@@ -2,6 +2,11 @@ pipeline {
     options { skipDefaultCheckout() }
     agent {label 'linux'} 
 
+    parameters {
+        string(name: 'TAGImage', defaultValue: 'tagimage', description: 'tag image')
+       
+    }
+
 stages{
     stage('Clean Workspace') {
         steps{
@@ -21,8 +26,9 @@ stages{
                 echo "#################### 11111111111111  ####################"
                     sh "cat manifest/manifest.yaml"
                     echo "#################### 2222222222222222  #################"
-                    sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:8899+g' manifest/manifest.yaml"
+                    sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:$TAGImage+g' manifest/manifest.yaml"
                     sh "cat manifest/manifest.yaml"
+                    
 
                     
 
