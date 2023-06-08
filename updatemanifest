@@ -28,9 +28,11 @@ stages{
                     echo "#################### 2222222222222222  #################"
                     sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:$TAGImage+g' manifest/manifest.yaml"
                     sh "cat manifest/manifest.yaml"
-                    sh "git config --global user.name "${GIT_USERNAME}""
+                    
                     sh "git add ."
                     echo "#################### 555555555555555555555555555  #################"
+                    sh "git config --global user.email "bilel.marzouk@esprit.tn""
+                    sh "git config --global user.name "bilelm1""
                     sh "git commit -m 'Done by jenkins job changemanifest: ${TAGImage}'"
                     echo "#################### 6666666666666666666666  #################"
                     sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/ESBOnline-PFE HEAD:master"
