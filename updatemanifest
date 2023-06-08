@@ -21,7 +21,7 @@ stages{
                 echo "#################### 11111111111111  ####################"
                     sh "cat manifest/manifest.yaml"
                     echo "#################### 2222222222222222  #################"
-                    sh "sed -i '192.168.0.128:5567/esbonline/esbonline+192.168.0.128:5567/esbonline/esbonline:555+g' manifest/manifest.yaml"
+                    sh "sed -i 'd+192.168.0.128:5567/esbonline/esbonline+192.168.0.128:5567/esbonline/esbonline:555+g' manifest/manifest.yaml"
                     sh "cat manifest/manifest.yaml"
 
                     
