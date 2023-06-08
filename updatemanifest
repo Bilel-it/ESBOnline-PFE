@@ -9,9 +9,12 @@ stages{
         }
     }
     stage('Clone repository'){
+        steps{
         checkout scm
+        }
     }
     stage ('Update GIT'){
+        steps{
         script{
             
                 withCredentials([usernamePassword(credentialsId: '9813091d-d878-41ff-8b14-578bd8fa9f7b', passwordVariable: 'Sigma2023+' , usernameVariable: 'bilelm1')]){
@@ -24,6 +27,7 @@ stages{
                 
             }
         }
+    }
     }
 }
 
