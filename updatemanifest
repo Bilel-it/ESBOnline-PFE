@@ -8,7 +8,7 @@ node{
     stage ('Update GIT'){
         script{
             
-                withCredentials([usernamePassword(credentialsId: 'tockenupdate', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
+                withCredentials([usernamePassword(credentialsId: '9813091d-d878-41ff-8b14-578bd8fa9f7b', passwordVariable: Sigma2023+ , usernameVariable: bilelm1)]){
                 echo "#################### 11111111111111  ####################"
                     sh "cat manifest/manifest.yaml"
                     echo "#################### 2222222222222222  #################"
