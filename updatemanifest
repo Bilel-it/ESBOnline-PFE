@@ -1,4 +1,8 @@
-node{
+pipeline {    
+    options { skipDefaultCheckout() }
+    agent {label 'linux'} 
+
+stages{
     stage('Clean Workspace') {
         cleanWs()
     }
@@ -19,4 +23,6 @@ node{
             }
         }
     }
+}
+
 }
