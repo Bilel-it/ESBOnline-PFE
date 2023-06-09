@@ -15,7 +15,7 @@ stages{
     }
     stage('Clone repository'){
         steps{
-        git clone -b master git@github.com:Bilel-it/ESBOnline-PFE.git
+        sh "git clone -b master git@github.com:Bilel-it/ESBOnline-PFE.git"
         }
     }
     stage ('Update GIT'){
