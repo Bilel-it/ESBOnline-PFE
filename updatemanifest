@@ -34,7 +34,10 @@ stages{
                     sh '''
                     git config user.email "bilel.marzouk@esprit.tn"
                     git config user.name "bilel.marzouk"
-                    git commit -m 'Done by jenkins job changemanifest:${TAGImage}'"
+                    git config  --global user.email "bilel.marzouk@esprit.tn"
+                    git config  --global user.name "bilel.marzouk"
+                    git commit -m "Done by jenkins job changemanifest:${TAGImage}"
+                    '''
                     echo "#################### 6666666666666666666666  #################"
                     sh "git push origin master"
                     
