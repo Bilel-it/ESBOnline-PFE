@@ -15,7 +15,7 @@ stages{
     }
     stage('Clone repository'){
         steps{
-        checkout scm
+        git clone -b master git@github.com:Bilel-it/ESBOnline-PFE.git
         }
     }
     stage ('Update GIT'){
@@ -32,10 +32,7 @@ stages{
                     sh "git add ."
                     echo "#################### 555555555555555555555555555  #################"
                     sh '''
-                    git config user.email "bilel.marzouk@esprit.tn"
-                    git config user.name "bilel.marzouk"
-                    git config  --global user.email "bilel.marzouk@esprit.tn"
-                    git config  --global user.name "bilel.marzouk"
+                    
                     git commit -m "Done by jenkins job changemanifest:${TAGImage}"
                     '''
                     echo "#################### 6666666666666666666666  #################"
