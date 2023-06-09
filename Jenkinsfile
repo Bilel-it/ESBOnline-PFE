@@ -1,5 +1,5 @@
 pipeline {    
-    options { skipDefaultCheckout() }
+    // options { skipDefaultCheckout() }
     agent {label 'windows'} 
 
     environment {
