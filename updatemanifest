@@ -27,8 +27,11 @@ stages{
                     sh "cat manifest/manifest.yaml"
                     echo "#################### 2222222222222222  #################"
                     sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:$TAGImage+g' manifest/manifest.yaml"
-                    sh "cat manifest/manifest.yaml"
-                    
+                    sh '''
+                    ls -l
+                 
+                    '''
+                   
                     sh "git add ."
                     echo "#################### 555555555555555555555555555  #################"
                     sh '''
