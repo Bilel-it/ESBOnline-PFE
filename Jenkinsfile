@@ -16,7 +16,7 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6)
-       // msbuildHome = tool 'Default MSBuild'
+       // msbuildHome = tool 'Defaultt MSBuild'
        // scannerHome = tool 'SonarScanner for MSBuild'
         
     }
