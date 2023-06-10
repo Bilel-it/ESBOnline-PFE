@@ -13,7 +13,7 @@ stages{
         cleanWs()
         }
     }
-    stage('Clone repository'){
+    stage('Checkout SCM'){
         steps{
         checkout scm
         }
@@ -34,6 +34,7 @@ stages{
     stage ('Update GIT'){
         steps{
             script{
+                withCredentials([usernamePassword(credentialsId: '9813091d-d878-41ff-8b14-578bd8fa9f7b', passwordVariable: 'GIT_PASSWORD' , usernameVariable: 'GIT_USERNAME')]){
                 sh '''
                     git add .
                     git config user.email "bilel.marzouk@esprit.tn"
@@ -43,6 +44,7 @@ stages{
                     git commit -m "Done by jenkins job changemanifest:${TAGImage}"
                     git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master
                     '''
+                }
 
             }
         }
