@@ -13,46 +13,48 @@ stages{
         cleanWs()
         }
     }
-    stage('Checkout SCM'){
+    stage('Clone repository'){
         steps{
         checkout scm
         }
     }
-    stage ('Modify manifest'){
+    stage ('Update GIT'){
         steps{
         script{
             
                 withCredentials([usernamePassword(credentialsId: '9813091d-d878-41ff-8b14-578bd8fa9f7b', passwordVariable: 'GIT_PASSWORD' , usernameVariable: 'GIT_USERNAME')]){
-                //echo "#################### 11111111111111  ####################"
-                //    sh "cat manifest/manifest.yaml"
-                //    echo "#################### 2222222222222222  #################"
+                echo "#################### 11111111111111  ####################"
+                    sh "cat manifest/manifest.yaml"
+                    echo "#################### 2222222222222222  #################"
                     sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:$TAGImage+g' manifest/manifest.yaml"
-                }
-        }
-        }
-    }
-
-    stage ('Update GIT'){
-        steps{
-            script{
-                //sh "cat manifest/manifest.yaml"
+                    sh "cat manifest/manifest.yaml"
                     
-                    //sh "git add ."
-                   // echo "#################### 555555555555555555555555555  ################"
+                    sh "git add ."
+                    echo "#################### 555555555555555555555555555  #################"
                     sh '''
-                    git add .
                     git config user.email "bilel.marzouk@esprit.tn"
                     git config user.name "bilel.marzouk"
                     git config  --global user.email "bilel.marzouk@esprit.tn"
                     git config  --global user.name "bilel.marzouk"
                     git commit -m "Done by jenkins job changemanifest:${TAGImage}"
-                    git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master
                     '''
-                   // echo "#################### 6666666666666666666666  #################"
-                    //sh "git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master"
+                    echo "#################### 6666666666666666666666  #################"
+                    sh "git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master"
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                
             }
         }
     }
-
     }
+}
+
 }
