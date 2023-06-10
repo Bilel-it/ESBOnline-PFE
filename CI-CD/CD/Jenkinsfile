@@ -18,7 +18,7 @@ stages{
         checkout scm
         }
     }
-    stage ('Update GIT'){
+    stage ('modify manifest'){
         steps{
         script{
             
@@ -27,11 +27,14 @@ stages{
                     sh "cat manifest/manifest.yaml"
                     
                     sh "sed -i 's+192.168.0.128:5567/esbonline/esbonline.*+192.168.0.128:5567/esbonline/esbonline:$TAGImage+g' manifest/manifest.yaml"
-                    //sh "cat manifest/manifest.yaml"
-                    
-                   // sh "git add ."
-                    
-                    sh '''
+                }
+        }
+        }
+    }
+    stage ('Update GIT'){
+        steps{
+            script{
+                sh '''
                     git add .
                     git config user.email "bilel.marzouk@esprit.tn"
                     git config user.name "bilel.marzouk"
@@ -40,23 +43,10 @@ stages{
                     git commit -m "Done by jenkins job changemanifest:${TAGImage}"
                     git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master
                     '''
-                    
-                    //sh "git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GIT_USERNAME/ESBOnline-PFE HEAD:master"
-                    
 
-                    
-
-                    
-
-                    
-                    
-                    
-                    
-                
             }
         }
-    }
+    }          
     }
 }
-
-}
+ 
