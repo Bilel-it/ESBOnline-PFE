@@ -30,7 +30,7 @@ stages{
                     sh "cat manifest/manifest.yaml"
                     
                     sh "git add ."
-                    echo "#################### 555555555555555555555555555  #################"
+                    echo "#################### 555555555555555555555555555  ################"
                     sh '''
                     git config user.email "bilel.marzouk@esprit.tn"
                     git config user.name "bilel.marzouk"
