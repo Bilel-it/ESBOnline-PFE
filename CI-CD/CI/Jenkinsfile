@@ -16,10 +16,10 @@ pipeline {
 
         allcommitId = bat(returnStdout: true, script: 'git rev-parse HEAD').trim()
         commitId = allcommitId.substring(allcommitId.length() - 6) 
-               
+
     }    
     stages {
-      stage('SCM'){
+      stage('SCM2'){
         steps{
           checkout scm
         }
