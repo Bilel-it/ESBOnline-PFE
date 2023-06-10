@@ -141,7 +141,7 @@ SonarScanner.MSBuild.exe end /d:sonar.login="624f95b62804b5cd3d99b8fcffe1e7c6fa6
                     
                     
                     artifacts: [
-                    [artifactId: "esbonline-${commitId}-dev",
+                    [artifactId: "esbonline-${commitId}",
                     classifier: '',
                     file: "publish-${commitId}.zip",                    
                     type: 'zip']
