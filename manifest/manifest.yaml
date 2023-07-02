@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - name: esbonline
-          image: 192.168.0.128:5567/esbonline/esbonline:5df238
+          image: 192.168.0.128:5567/esbonline/esbonline:27cee6
           #docker.io/bilelm1/esbonline:01
           ports:
           - containerPort: 80
